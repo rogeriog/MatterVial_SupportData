@@ -1,2 +1,44 @@
-# Boosting-feature-based-machine-learning-models-for-materials-science
-Supporting information for the paper: 
+# Boosting Feature-Based Machine Learning Models for Materials Science
+
+This repository contains the data and code used to support the findings in the paper:
+
+**"Boosting feature-based machine learning models for materials science: encoding electronic descriptors and graph-based features for enhanced accuracy and faster featurization"**  
+by Rogério Almeida Gouvêa, Pierre-Paul De Breuck, Tatiane Pretto, Gian-Marco Rignanese, Marcos José Leite dos Santos
+
+## Abstract
+This study presents a method to improve feature-based machine learning models in materials science by leveraging graph neural networks (GNNs) as featurizers. Our approach combines traditional chemical and geometrical features with GNN-derived descriptors, offering both interpretability and enhanced accuracy. Three independent techniques for GNN featurizer construction were employed:  
+- Compressing electronic structure descriptors  
+- Integrating pretrained GNN models  
+- Task-specific GNN development
+
+Using MODNet as the base feature-based model and MEGNet for GNN featurization, the proposed method yielded significant accuracy improvements, particularly for predicting the heat of formation in perovskites, reducing the error by up to 44.2% compared to default MODNet settings.
+
+This approach was further generalized to more complex tasks such as convex hull distance and band gap prediction using halogen-containing materials from the OQMD dataset. SHAP plots and surrogate models were utilized to restore interpretability of the GNN features, extracting valuable chemical insights.
+
+## Repository Contents
+This repository includes:
+- **Datasets**: Datasets used in the paper for training and evaluation.
+  - `data/perovskite_dataset.csv`: Heat of formation dataset for perovskites.
+  - `data/OQMD_dataset.csv`: Dataset for convex hull distance and band gaps.
+  
+- **Notebooks**: Example notebooks showcasing how to use the featurizers and models.
+  - `notebooks/train_moddata_matbench_perovskites.ipynb`: Example notebook for training MODNet with GNN featurizers.
+  - `notebooks/feature_importance_analysis.ipynb`: SHAP and surrogate model analysis.
+
+- **Models and Results**: Pretrained GNN models and MODNet configurations along with the results obtained in the paper.
+     - `models/`: Pretrained GNN models.
+     - `results/`: Results obtained in the paper.
+
+## Getting Started
+To replicate the results presented in the paper or to apply these methods to your own dataset, check the repository with the (modified MODNet version)[https://github.com/rogeriog/modnet_gnn_enhanced_v0.2.1] enhanced with the GNN featurizers, and follow the notebook examples.
+
+## Results
+The main results of this work include:
+- **Accuracy improvement**: The proposed method reduces the MAE for heat of formation predictions by 44.2% compared to the default MODNet featurizer.
+- **Task generalization**: The method was successfully generalized to predict complex properties such as the convex hull distance and band gaps in halogen-containing materials from the OQMD dataset.
+- **Interpretability**: Feature importance analysis with SHAP and surrogate models recovers chemical insights, enhancing the interpretability of GNN features.
+
+## Contact and Contributions
+For any clarifications, please contact the corresponding authors:  
+- Gian-Marco Rignanese: [gian-marco.rignanese@uclouvain.be](mailto:gian-marco.rignanese@uclouvain.be)  
+- Marcos José Leite dos Santos: [mjls@ufrgs.br](mailto:mjls@ufrgs.br)
