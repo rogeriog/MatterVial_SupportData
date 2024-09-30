@@ -17,20 +17,15 @@ This approach was further generalized to more complex tasks such as convex hull 
 
 ## Repository Contents
 This repository includes:
-- **Datasets**: Datasets used in the paper for training and evaluation.
-  - `data/perovskite_dataset.csv`: Heat of formation dataset for perovskites.
-  - `data/OQMD_dataset.csv`: Dataset for convex hull distance and band gaps.
+- **Results**: The results obtained in the paper organized in the order they are presented.
+  - `results/`
   
-- **Notebooks**: Example notebooks showcasing how to use the featurizers and models.
-  - `notebooks/train_moddata_matbench_perovskites.ipynb`: Example notebook for training MODNet with GNN featurizers.
-  - `notebooks/feature_importance_analysis.ipynb`: SHAP and surrogate model analysis.
-
-- **Models and Results**: Pretrained GNN models and MODNet configurations along with the results obtained in the paper.
-     - `models/`: Pretrained GNN models.
-     - `results/`: Results obtained in the paper.
+- **Datasets and models**: These are downloaded from [FigShare 
+link](https://figshare.com/ndownloader/articles/27132093?private_link=ad92db8097ddc8d901f5), a python script is provided
+to help with this.
 
 ## Getting Started
-To replicate the results presented in the paper or to apply these methods to your own dataset, check the repository with the (modified MODNet version)[https://github.com/rogeriog/modnet_gnn_enhanced_v0.2.1] enhanced with the GNN featurizers, and follow the notebook examples.
+To replicate the results presented in the paper or to apply these methods to your own dataset, check the repository with the (modified MODNet version)[https://github.com/rogeriog/modnet_gnn_enhanced_v0.2.1] enhanced with the GNN featurizers, and check the scripts provided along with the results.
 
 ## Results
 The main results of this work include:
