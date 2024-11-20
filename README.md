@@ -1,8 +1,8 @@
-# Boosting Feature-Based Machine Learning Models for Materials Science
+# Bridging Feature-Based Models and Graph Neural Networks
 
 This repository contains the data and code used to support the findings in the paper:
 
-**"Boosting feature-based machine learning models for materials science: encoding electronic descriptors and graph-based features for enhanced accuracy and faster featurization"**  
+**"Bridging Feature-Based Models and Graph Neural Networks: A Hybrid Approach for Accurate and Interpretable Materials Modeling"**  
 by Rogério Almeida Gouvêa, Pierre-Paul De Breuck, Tatiane Pretto, Gian-Marco Rignanese, Marcos José Leite dos Santos
 
 ## Abstract
