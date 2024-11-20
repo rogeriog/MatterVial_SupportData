@@ -1,4 +1,4 @@
-# Bridging Feature-Based Models and Graph Neural Networks
+# Supporting Data: Bridging Feature-Based Models and Graph Neural Networks
 
 This repository contains the data and code used to support the findings in the paper:
 
