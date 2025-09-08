@@ -3,7 +3,7 @@
 This repository contains the data and code used to support the findings in the paper:
 
 **"Bridging Feature-Based Models and Graph Neural Networks: A Hybrid Approach for Accurate and Interpretable Materials Modeling"**  
-by Rogério Almeida Gouvêa, Pierre-Paul De Breuck, Tatiane Pretto, Gian-Marco Rignanese, Marcos José Leite dos Santos
+by Rogério Almeida Gouvêa, Pierre-Paul De Breuck, Tatiane Pretto, Gian-Marco Rignanese, Marcos José Leite Santos
 
 ## Abstract
 This study presents a method to improve feature-based machine learning models in materials science by leveraging graph neural networks (GNNs) as featurizers. Our approach combines traditional chemical and geometrical features with GNN-derived descriptors, offering both interpretability and enhanced accuracy. Three independent techniques for GNN featurizer construction were employed:  
@@ -36,4 +36,4 @@ The main results of this work include:
 ## Contact and Contributions
 For any clarifications, please contact the corresponding authors:  
 - Gian-Marco Rignanese: [gian-marco.rignanese@uclouvain.be](mailto:gian-marco.rignanese@uclouvain.be)  
-- Marcos José Leite dos Santos: [mjls@ufrgs.br](mailto:mjls@ufrgs.br)
+- Marcos José Leite Santos: [mjls@ufrgs.br](mailto:mjls@ufrgs.br)
