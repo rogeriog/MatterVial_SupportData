@@ -35,5 +35,6 @@ The main results of this work include:
 
 ## Contact and Contributions
 For any clarifications, please contact the corresponding authors:  
+- Rogério Almeida Gouvêa [rogeriog.em@gmail.com](mailto:rogeriog.em@gmail.com])  
 - Gian-Marco Rignanese: [gian-marco.rignanese@uclouvain.be](mailto:gian-marco.rignanese@uclouvain.be)  
 - Marcos José Leite Santos: [mjls@ufrgs.br](mailto:mjls@ufrgs.br)
