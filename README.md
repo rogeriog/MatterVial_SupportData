@@ -1,3 +1,6 @@
+# Full support data for new version of the paper coming in a few days. 
+# Autoencoders, and partial analysis of feature synergy in the matbench perovskites already available.
+
 # Supporting Data: Bridging Feature-Based Models and Graph Neural Networks
 
 This repository contains the data and code used to support the findings in the paper:
