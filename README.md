@@ -25,7 +25,7 @@ here including output files and fold by fold metrics.
 Correspond to Table 1 of the paper:
 
 <p align='center'>
-<img src="../.github/Table1MatterVial.png" alt="benchmark results">
+<img src=".github/Table1MatterVial.png" alt="benchmark results">
 </p>
 
 
@@ -35,7 +35,7 @@ Results table 2, focusing on matbench_perovskites dataset:
   (COMING SOON)
   - `mattervial_perovskites_full_analysis/`
 <p align='center'>
-<img src="../.github/Table2MatterVial.png" alt="benchmark results">
+<img src=".github/Table2MatterVial.png" alt="benchmark results">
 </p>
 
 ## Getting Started
