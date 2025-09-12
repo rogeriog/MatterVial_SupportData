@@ -1,0 +1,77 @@
+Job started on Mon May 19 13:21:07 CEST 2025
+Running on node(s): cns261
+2025-05-19 13:21:31.367938: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Running on 64 jobs
+Preparing nested CV run for task 'matbench_steels_matminer_roost_lmp_threshold30'
+Found 1 matching files for matbench_steels_matminer_roost_lmp_threshold30
+2025-05-19 13:21:58,228 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5ed33730> object, created with modnet version 0.1.13
+GA settings:
+    Population size: 50
+    Number of generations: 20
+    Early stopping: 8
+    Refit: False
+Preparing fold 1 ...
+2025-05-19 13:21:58,265 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5ed33850> object, created with modnet version 0.1.13
+Loaded train data from folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f1
+2025-05-19 13:21:58,294 - modnet - INFO - Data successfully saved as folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f1!
+Preparing fold 2 ...
+2025-05-19 13:21:58,329 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5ea004c0> object, created with modnet version 0.1.13
+Loaded train data from folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f2
+2025-05-19 13:21:58,358 - modnet - INFO - Data successfully saved as folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f2!
+Preparing fold 3 ...
+2025-05-19 13:21:58,388 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5eb05100> object, created with modnet version 0.1.13
+Loaded train data from folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f3
+2025-05-19 13:21:58,524 - modnet - INFO - Data successfully saved as folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f3!
+Preparing fold 4 ...
+2025-05-19 13:21:58,551 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5ea00100> object, created with modnet version 0.1.13
+Loaded train data from folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f4
+2025-05-19 13:21:58,578 - modnet - INFO - Data successfully saved as folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f4!
+Preparing fold 5 ...
+2025-05-19 13:21:58,612 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f7b5de03ee0> object, created with modnet version 0.1.13
+Loaded train data from folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f5
+2025-05-19 13:21:58,638 - modnet - INFO - Data successfully saved as folds/matbench_steels_matminer_roost_lmp_threshold30_train_moddata_f5!
+Training fold 1 ...
+Fold 1 already completed. Loading saved results.
+2025-05-19 13:21:58.705998: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-05-19 13:21:58.706851: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib:/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/sissopp_env/lib:/lib64:/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/modnet2020/lib::
+2025-05-19 13:21:58.706896: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-05-19 13:21:58.706943: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns261.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+2025-05-19 13:21:58.707400: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-05-19 13:21:59,509 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f7ba0066820> object, created with modnet version 0.1.13
+Loaded saved model from results/matbench_steels_matminer_roost_lmp_threshold30_best_model_fold_1.pkl
+Training fold 2 ...
+Fold 2 already completed. Loading saved results.
+2025-05-19 13:22:00,164 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f7b56fc1d60> object, created with modnet version 0.1.13
+Loaded saved model from results/matbench_steels_matminer_roost_lmp_threshold30_best_model_fold_2.pkl
+Training fold 3 ...
+Fold 3 already completed. Loading saved results.
+2025-05-19 13:22:00,993 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f7b56bde610> object, created with modnet version 0.1.13
+Loaded saved model from results/matbench_steels_matminer_roost_lmp_threshold30_best_model_fold_3.pkl
+Training fold 4 ...
+Fold 4 already completed. Loading saved results.
+2025-05-19 13:22:01,881 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f7b56788580> object, created with modnet version 0.1.13
+Loaded saved model from results/matbench_steels_matminer_roost_lmp_threshold30_best_model_fold_4.pkl
+Training fold 5 ...
+Fold 5 already completed. Loading saved results.
+2025-05-19 13:22:02,625 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f7b567d53a0> object, created with modnet version 0.1.13
+Loaded saved model from results/matbench_steels_matminer_roost_lmp_threshold30_best_model_fold_5.pkl
+Final score =  100.63802279220872
+Saved average target metrics to results/matbench_steels_matminer_roost_lmp_threshold30_average_target_metrics.json
+Fold predictions saved to results/matbench_steels_matminer_roost_lmp_threshold30_fold_predictions.csv
+2025-05-19 13:22:06,846 - modnet - INFO - Model successfully saved as final_model/matbench_steels_matminer_roost_lmp_threshold30_model!
+Final score =  100.63802279220872
+Job finished on Mon May 19 13:22:07 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 391MiB
+Total CPU Time                           - CPU_Time         : 01:05:04
+Execution Time                           - Wall_Time        : 00:01:01
+total programme cpu time                 - Total_CPU        : 00:13.599
+Total_CPU / CPU_Time  (%)                - ETA              : 0%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 01:05:04
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : 17966
+

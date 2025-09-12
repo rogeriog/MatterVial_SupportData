@@ -1,3 +1,4 @@
 # exclude all .gz files
 datasets_and_models/
 *.gz
+**/*.pkl

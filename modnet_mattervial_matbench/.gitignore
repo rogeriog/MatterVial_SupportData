@@ -80,7 +80,7 @@ final_model/
 RESULTS_select_later/
 
 ## removing other files
-*.out
+running_scripts/
 *.sh
 *.py
 *.ipynb
