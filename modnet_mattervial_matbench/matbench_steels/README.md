@@ -1,0 +1,6 @@
+# Reproducing MODNet results on matbench_steels
+The matbench_steels dataset has only 312 samples. Therefore, we used a more involved algorithm to reproduce the original MODNet results and compare them with our method.
+
+Without reranking results are shown in the `no_reranking/` folder, we can observe that the inclusion of the roost features improves performance significantly compared to the MatMiner only baseline. However, we couldn't achieve the same performance as the original MODNet results. Therefore, we employed the reranking approach.
+
+MODNet ranks features based on Normalized Mutual Information (NMI) and redundancy. As part of a hyperparameter optimization process, it selects the optimal number of features for prediction. We provided a script,  `rerank_features.py`, to rerank the features based on SHAP feature importance from the initial trained models. New training models were then generated using these reranked features with different thresholds to compel MODNet to use fewer more meaningful features and improve generalization. The models that performed best on the training/validation set were subsequently evaluated on the test set achieving our reported results.
