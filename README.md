@@ -1,7 +1,4 @@
-# MatterVial_SupportData
-
-## Supporting Data for paper: `Combining feature-based approaches with graph neural networks and symbolic regression for synergistic performance and interpretability`
-
+# MatterVial Support Data
 This repository contains the data and code used to support the findings in the paper:
 
 **"Combining feature-based approaches with graph neural networks and symbolic regression for synergistic performance and interpretability"**  
