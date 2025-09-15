@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="691.2pt" version="1.1" viewBox="0 0 864 691.2" width="864pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2025-08-18T17:29:00.501166</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.3.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 691.2 
+L 864 691.2 
+L 864 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 486.11 641.32 
+L 853.2 641.32 
+L 853.2 28.32 
+L 486.11 28.32 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 33.428333 
+L 835.719524 33.428333 
+L 835.719524 74.295 
+L 486.11 74.295 
+z
+" style="fill:#472664;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 84.511667 
+L 510.710695 84.511667 
+L 510.710695 125.378333 
+L 486.11 125.378333 
+z
+" style="fill:#4b3f77;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 135.595 
+L 500.78133 135.595 
+L 500.78133 176.461667 
+L 486.11 176.461667 
+z
+" style="fill:#475280;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 186.678333 
+L 499.640376 186.678333 
+L 499.640376 227.545 
+L 486.11 227.545 
+z
+" style="fill:#3f6182;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 237.761667 
+L 494.887257 237.761667 
+L 494.887257 278.628333 
+L 486.11 278.628333 
+z
+" style="fill:#386e82;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 288.845 
+L 494.578858 288.845 
+L 494.578858 329.711667 
+L 486.11 329.711667 
+z
+" style="fill:#317c80;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 339.928333 
+L 494.429636 339.928333 
+L 494.429636 380.795 
+L 486.11 380.795 
+z
+" style="fill:#2e8a7f;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 391.011667 
+L 494.368709 391.011667 
+L 494.368709 431.878333 
+L 486.11 431.878333 
+z
+" style="fill:#369b7b;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 442.095 
+L 493.927024 442.095 
+L 493.927024 482.961667 
+L 486.11 482.961667 
+z
+" style="fill:#50ae75;"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 493.178333 
+L 493.540561 493.178333 
+L 493.540561 534.045 
+L 486.11 534.045 
+z
+" style="fill:#72be6a;"/>
+   </g>
+   <g id="patch_13">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 544.261667 
+L 491.689914 544.261667 
+L 491.689914 585.128333 
+L 486.11 585.128333 
+z
+" style="fill:#95c551;"/>
+   </g>
+   <g id="patch_14">
+    <path clip-path="url(#pcb5db940bc)" d="M 486.11 595.345 
+L 491.503614 595.345 
+L 491.503614 636.211667 
+L 486.11 636.211667 
+z
+" style="fill:#bac836;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="mbb675727e8" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 486.11, 660.4775)" x="486.11" y="660.4775">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="556.177021" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 556.177021, 660.4775)" x="556.177021" y="660.4775">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="626.244042" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 626.244042, 660.4775)" x="626.244042" y="660.4775">1.0</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="696.311063" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 696.311063, 660.4775)" x="696.311063" y="660.4775">1.5</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="766.378085" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 766.378085, 660.4775)" x="766.378085" y="660.4775">2.0</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="836.445106" xlink:href="#mbb675727e8" y="641.32"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 836.445106, 660.4775)" x="836.445106" y="660.4775">2.5</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-family:DejaVu Sans;font-size:14px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 669.655, 678.442813)" x="669.655" y="678.442813">Sum of Mean Absolute SHAP Values</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="m75376fa3a1" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="53.861667"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(28.955 51.975417)">Cluster 12: coGN_ReadoutComponent3_Feature71_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 70.336917)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="104.945"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(215.9725 103.05875)">Cluster 9: ORB_v3_layer_5_#143</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 121.42025)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="156.028333"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(226.1525 154.142083)">Cluster 1: ORB_v3_layer_3_#60</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 172.503583)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="207.111667"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(59.2675 205.225417)">Cluster 5: ROOST_mpgap_LayerMaterialPooling_#42</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 223.586917)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="258.195"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(39.135 256.30875)">Cluster 7: coGN_ReadoutComponent4_Feature32_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 274.67025)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="309.278333"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(28.955 307.392083)">Cluster 6: coGN_ReadoutComponent4_Feature107_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 325.753583)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_13">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="360.361667"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(215.9725 358.475417)">Cluster 2: ORB_v3_layer_1_#128</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 376.836917)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_14">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="411.445"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(82.355 409.55875)">Cluster 3: ORB_v3_initial_atom_embedding_#210</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 427.92025)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_15">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="462.528333"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(39.135 460.642083)">Cluster 4: coGN_ReadoutComponent4_Feature54_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 479.003583)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_16">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="513.611667"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(215.9725 511.725417)">Cluster 8: ORB_v3_layer_3_#113</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 530.086917)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_17">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="564.695"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(28.955 562.80875)">Cluster 11: coGN_ReadoutComponent1_Feature66_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 581.17025)">(Top Feature Importance: 0.01)</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_18">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="486.11" xlink:href="#m75376fa3a1" y="615.778333"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(28.955 613.892083)">Cluster 10: coGN_ReadoutComponent2_Feature40_fold0</text>
+      <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;" transform="translate(231.2175 632.253583)">(Top Feature Importance: 0.00)</text>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-family:DejaVu Sans;font-size:14px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 22.043438, 334.82)" x="22.043438" y="334.82">Feature Cluster</text>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_20">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_21">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_22">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_23">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_24">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_25">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_26">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_27">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_28">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_29">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="line2d_30">
+    <path clip-path="url(#pcb5db940bc)" d="M 0 0 
+" style="fill:none;stroke:#424242;stroke-linecap:square;stroke-width:2.25;"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 486.11 641.32 
+L 486.11 28.32 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 853.2 641.32 
+L 853.2 28.32 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 486.11 641.32 
+L 853.2 641.32 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 486.11 28.32 
+L 853.2 28.32 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="text_21">
+    <text style="font-family:DejaVu Sans;font-size:16px;font-stretch:normal;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 669.655, 22.32)" x="669.655" y="22.32">Aggregated Feature Importance by SHAP-based Cluster (Fold 0)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcb5db940bc">
+   <rect height="613" width="367.09" x="486.11" y="28.32"/>
+  </clipPath>
+ </defs>
+</svg>

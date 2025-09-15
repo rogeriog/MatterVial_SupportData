@@ -1,0 +1,91 @@
+--- Top Features from Each Group and Their Formulas (Fold 0) ---
+
+Feature: ℓ-MM_v1_#476
+  Full Formulas (All Dimensions):
+    - D1: -9.57 - 3.15 * ((CrystalNNFingerprint_mean_wt_CN_14 + CrystalNNFingerprint_mean_body-centered_cubic_CN_8) * (OPSiteFingerprint_mean_body-centered_cubic_CN_8 + ChemEnvSiteFingerprint_mean_C:8))
+R²: 0.91
+    - D2: -3.3e-4 - 9.66 * ((ElementProperty_MagpieData_mean_GSvolume_pa / OPSiteFingerprint_mean_body-centered_cubic_CN_8) * (MaximumPackingEfficiency_max_packing_efficiency⁶)) - 2.98 * ((CrystalNNFingerprint_mean_wt_CN_14 + CrystalNNFingerprint_mean_body-centered_cubic_CN_8) * (OPSiteFingerprint_mean_body-centered_cubic_CN_8 + ChemEnvSiteFingerprint_mean_C:8))
+R²: 0.94
+    - D3: 1.00 - 3.1e-6 * (|(CrystalNNFingerprint_mean_octahedral_CN_6 + DensityFeatures_packing_fraction) - sqrt(ElementProperty_MagpieData_avg_dev_Column)|) - 9.34 * ((MaximumPackingEfficiency_max_packing_efficiency / ElementProperty_MagpieData_mean_Number) / (|GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0 - AGNIFingerPrint_std_dev_AGNI_dir=x_eta=1_88e+00|)) - 4.44 * ((CrystalNNFingerprint_mean_wt_CN_14 + CrystalNNFingerprint_mean_body-centered_cubic_CN_8) * (OPSiteFingerprint_mean_body-centered_cubic_CN_8 + ChemEnvSiteFingerprint_mean_C:8))
+R²: 0.95
+    - D4: 9.3e-7 + 1.02 * ((|ElementProperty_MagpieData_avg_dev_Column - OPSiteFingerprint_mean_body-centered_cubic_CN_8|) / (ElementProperty_MagpieData_mode_SpaceGroupNumber * GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0)) - 3.9e-6 * (|(CrystalNNFingerprint_mean_octahedral_CN_6 + DensityFeatures_packing_fraction) - sqrt(ElementProperty_MagpieData_avg_dev_Column)|) - 9.45 * ((MaximumPackingEfficiency_max_packing_efficiency / ElementProperty_MagpieData_mean_Number) / (GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0 + AGNIFingerPrint_std_dev_AGNI_dir=x_eta=1_88e+00)) - 4.46 * ((CrystalNNFingerprint_mean_wt_CN_14 + CrystalNNFingerprint_mean_body-centered_cubic_CN_8) * (OPSiteFingerprint_mean_body-centered_cubic_CN_8 + ChemEnvSiteFingerprint_mean_C:8))
+R²: 0.96
+    - D5: 817.56 + 8.5e-7 * ((GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0 * ChemEnvSiteFingerprint_mean_C:8) - (CrystalNNFingerprint_mean_wt_CN_14⁶)) - 1.8e-2 * ((|ElementProperty_MagpieData_avg_dev_Column - OPSiteFingerprint_mean_body-centered_cubic_CN_8|) / (GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0 * ElementProperty_MagpieData_mean_CovalentRadius)) - 4.0e-6 * ((|ElementProperty_MagpieData_mode_CovalentRadius - ElementProperty_MagpieData_mean_CovalentRadius|) - (ElementProperty_MagpieData_range_Column * ElementProperty_MagpieData_avg_dev_Column)) - 9.43 * ((MaximumPackingEfficiency_max_packing_efficiency / ElementProperty_MagpieData_mean_Number) / (GeneralizedRDF_mean_Gaussian_center=0_0_width=1_0 + AGNIFingerPrint_std_dev_AGNI_dir=x_eta=1_88e+00)) - 3.67 * ((CrystalNNFingerprint_mean_wt_CN_14 + CrystalNNFingerprint_mean_body-centered_cubic_CN_8) * (OPSiteFingerprint_mean_body-centered_cubic_CN_8 + ChemEnvSiteFingerprint_mean_C:8))
+R²: 0.96
+--------------------------------------------------
+
+Feature: ℓ-OFM_v1_#55
+  Full Formulas (All Dimensions):
+    - D1: 15.77 - 6.95 * ((OFM: p⁴ - s¹ + OFM: s² - p⁴) + cbrt(OFM: p⁵ - p⁵))
+R²: 0.75
+    - D2: -8.84 + 15.68 * ((OFM: d³ - p⁴ - OFM: p³ - s²) - (OFM: p⁴ - d⁸ + OFM: p⁴ - d⁵)) - 7.73 * ((OFM: p⁴ - s¹ + OFM: s² - p⁴) + cbrt(OFM: p⁵ - p⁵))
+R²: 0.82
+    - D3: -3.63 - 7.93 * ((|OFM: p¹ - s² - OFM: s² - p⁴|) + (OFM: d¹⁰ - d¹⁰ + OFM: s² - d¹)) + 16.96 * ((OFM: d³ - p⁴ - OFM: p³ - s²) - (OFM: p⁴ - d⁸ + OFM: p⁴ - d⁵)) - 6.06 * (sqrt(OFM: p⁵ - p⁵) + (OFM: s¹ - p⁴ + OFM: s² - p⁴))
+R²: 0.87
+    - D4: -11.42 - 3.20 * ((OFM: p⁴ - d² - OFM: d⁴ - p⁴) + (OFM: s² - s¹ * OFM: s² - f¹⁴)) - 7.96 * ((OFM: d¹⁰ - s² + OFM: s² - d¹) + (|OFM: p¹ - s² - OFM: s² - p⁴|)) + 16.15 * ((OFM: d³ - p⁴ - OFM: p³ - s²) - (OFM: p⁴ - d⁸ + OFM: p⁴ - d⁵)) - 5.45 * (sqrt(OFM: p⁵ - p⁵) + (OFM: s¹ - p⁴ + OFM: s² - p⁴))
+R²: 0.89
+    - D5: -6.57 - 15.94 * ((OFM: d³ - p⁴ + OFM: s² - s¹) - (exp(-1.0 * OFM: s² - s²))) - 3.13 * ((OFM: p⁴ - d² - OFM: d⁴ - p⁴) + (OFM: p⁵ - s² * OFM: p⁴ - s²)) - 8.05 * ((|OFM: p¹ - s² - OFM: p⁴ - p⁴|) + (OFM: d¹⁰ - d¹⁰ + OFM: s² - d¹)) + 15.56 * ((OFM: p⁴ - f¹⁴ - OFM: p³ - s²) - (OFM: p⁴ - d⁸ + OFM: p⁴ - d⁵)) - 7.97 * (cbrt(OFM: p⁵ - p⁵) + (OFM: s¹ - p⁴ + OFM: s² - p⁴))
+R²: 0.90
+--------------------------------------------------
+
+Feature: MVL32_Eform_MP_2019_#3
+  Full Formulas (All Dimensions):
+    - D1: 26.92 + 1.95 * ((|ElectronegativityDiff_mean_EN_difference - ElementProperty_MagpieData_avg_dev_Electronegativity|) * (exp(-1.0 * ValenceOrbital_frac_d_valence_electrons)))
+R²: 0.79
+    - D2: 0.73 + 22.23 * ((ElementProperty_MagpieData_mean_NpValence * ElementProperty_MagpieData_avg_dev_NUnfilled) - (ℓ-OFM_v1_79 * ElectronegativityDiff_mean_EN_difference)) + 1.45 * ((|ElectronegativityDiff_mean_EN_difference - ElementProperty_MagpieData_avg_dev_Electronegativity|) * (exp(-1.0 * ValenceOrbital_frac_d_valence_electrons)))
+R²: 0.86
+    - D3: -3.0e-2 + 0.76 * ((ElementProperty_MagpieData_mode_CovalentRadius * Miedema_Miedema_deltaH_inter) + (|ElementProperty_MagpieData_avg_dev_CovalentRadius - ElementProperty_MagpieData_mean_SpaceGroupNumber|)) - 4.33 * ((ElementProperty_MagpieData_mean_NpValence * ElementProperty_MagpieData_avg_dev_NUnfilled) - (ℓ-OFM_v1_79 * ElectronegativityDiff_minimum_EN_difference)) + 9.26 * ((ElementProperty_MagpieData_mean_NpValence + ElectronegativityDiff_minimum_EN_difference) * (ValenceOrbital_frac_d_valence_electrons - ElementProperty_MagpieData_avg_dev_Electronegativity))
+R²: 0.88
+    - D4: -5.79 - 0.98 * ((|ElementProperty_MagpieData_mean_NpValence - ElementProperty_MagpieData_minimum_Column|) / (ElementProperty_MagpieData_minimum_Column + IonProperty_max_ionic_char)) - 0.74 * ((ElementProperty_MagpieData_avg_dev_NdValence * Miedema_Miedema_deltaH_inter) - cbrt(ℓ-OFM_v1_99)) + 56.71 * ((ElementProperty_MagpieData_mean_GSbandgap - ElementProperty_MagpieData_avg_dev_NUnfilled) + (ℓ-OFM_v1_79 * ElectronegativityDiff_minimum_EN_difference)) + 8.46 * ((ElementProperty_MagpieData_mean_NpValence * IonProperty_avg_ionic_char) / exp(ValenceOrbital_frac_d_valence_electrons))
+R²: 0.90
+    - D5: -5.4e-2 - 4.69 * ((ElementProperty_MagpieData_mode_CovalentRadius * ValenceOrbital_frac_p_valence_electrons) * (|ElementProperty_MagpieData_mean_GSbandgap - ValenceOrbital_frac_d_valence_electrons|)) - 0.94 * ((|ElementProperty_MagpieData_mean_NpValence - ElementProperty_MagpieData_minimum_Column|) / (ElementProperty_MagpieData_minimum_Column + IonProperty_max_ionic_char)) + 0.65 * ((ElementProperty_MagpieData_avg_dev_NdValence * Miedema_Miedema_deltaH_inter) - cbrt(ℓ-OFM_v1_99)) - 8.10 * ((ElementProperty_MagpieData_mean_NpValence * ElementProperty_MagpieData_avg_dev_NUnfilled) - (ℓ-OFM_v1_79 * ElectronegativityDiff_minimum_EN_difference)) + 10.44 * ((|ElementProperty_MagpieData_mean_NpValence - ValenceOrbital_frac_d_valence_electrons|) * (ValenceOrbital_frac_d_valence_electrons - ElementProperty_MagpieData_avg_dev_Electronegativity))
+R²: 0.91
+--------------------------------------------------
+
+Feature: ORB_v3_layer_1_#162
+  Full Formulas (All Dimensions):
+    - D1: 2.16 - 2.64 * (|(GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (ElementFraction_O + ElementProperty_MagpieData_mean_Electronegativity)|)
+R²: 0.62
+    - D2: -1.39 + 2.20 * (|(ElementProperty_MagpieData_mean_NdUnfilled * ElementFraction_O) - sqrt(ElementProperty_MagpieData_mean_NpUnfilled)|) - 1.40 * (|(GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (ElementFraction_O + ElementProperty_MagpieData_mean_Electronegativity)|)
+R²: 0.74
+    - D3: -9.0e-3 - 1.50 * ((GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_MeltingT) - (ElementProperty_MagpieData_mean_CovalentRadius * BandCenter_band_center)) - 2.15 * (|(ElementProperty_MagpieData_mean_NdUnfilled * ElementFraction_O) - sqrt(ElementProperty_MagpieData_mean_NpUnfilled)|) + 1.68 * ((GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (|BandCenter_band_center - ElementFraction_O|))
+R²: 0.79
+    - D4: 7904.06 - 1.1e-2 * ((TMetalFraction_transition_metal_fraction / ElementProperty_MagpieData_maximum_MeltingT) / (ElementProperty_MagpieData_avg_dev_NValence + DensityFeatures_packing_fraction)) - 1.38 * ((GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_MeltingT) - (ElementProperty_MagpieData_mean_CovalentRadius * BandCenter_band_center)) + 2.01 * (|(ElementProperty_MagpieData_mean_NdUnfilled * ElementFraction_O) - cbrt(ElementProperty_MagpieData_mean_NpUnfilled)|) + 1.67 * (|(GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (ElementFraction_O + ElementProperty_MagpieData_mean_Electronegativity)|)
+R²: 0.82
+    - D5: -1.32 + 8364.36 * (|(GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (|DensityFeatures_packing_fraction - MaximumPackingEfficiency_max_packing_efficiency|)|) - 9.9e-3 * ((TMetalFraction_transition_metal_fraction / ElementProperty_MagpieData_maximum_MeltingT) / (ElementProperty_MagpieData_avg_dev_NValence + DensityFeatures_packing_fraction)) - 1.34 * ((GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_MeltingT) - (ElementProperty_MagpieData_mean_CovalentRadius * BandCenter_band_center)) + 2.02 * (|(ElementProperty_MagpieData_mean_NdUnfilled * ElementFraction_O) - cbrt(ElementProperty_MagpieData_mean_NpUnfilled)|) + 2.35 * (|(GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 * ElementProperty_MagpieData_mean_GSvolume_pa) - (ElementFraction_O + ElementProperty_MagpieData_mean_Electronegativity)|)
+R²: 0.84
+--------------------------------------------------
+
+Feature: ROOST_oqmd_eform_LayerMaterialPooling_#46
+  Full Formulas (All Dimensions):
+    - D1: -1.78 + 6.5e-2 * (|(ElementProperty_MagpieData_minimum_Number * AGNIFingerPrint_std_dev_AGNI_eta=8_00e-01) - (exp(-1.0 * ElementProperty_MagpieData_range_MeltingT))|)
+R²: 0.24
+    - D2: -7.1e-2 - 1.74 * (|(ElementProperty_MagpieData_maximum_NpUnfilled - Stoichiometry_0-norm) - (|ElementProperty_MagpieData_avg_dev_NpValence - ElementProperty_MagpieData_mode_Electronegativity|)|) + 0.23 * (|(ElementProperty_MagpieData_minimum_Number * AGNIFingerPrint_std_dev_AGNI_eta=8_00e-01) - (exp(-1.0 * ElementProperty_MagpieData_range_MeltingT))|)
+R²: 0.30
+    - D3: -8.2e-2 - 6.2e-2 * ((ElementProperty_MagpieData_maximum_Number * Stoichiometry_5-norm) * (ElementFraction_O⁶)) - 2.12 * (|(|ElectronegativityDiff_minimum_EN_difference - ElementProperty_MagpieData_mode_Electronegativity|) - (ElementProperty_MagpieData_maximum_NpUnfilled - Stoichiometry_0-norm)|) + 0.24 * (|(AGNIFingerPrint_std_dev_AGNI_dir=y_eta=8_00e-01 * ElementProperty_MagpieData_minimum_Number) - (exp(-1.0 * ElementProperty_MagpieData_range_MeltingT))|)
+R²: 0.35
+    - D4: -151.14 - 3.0e-5 * ((exp(-1.0 * ElementProperty_MagpieData_avg_dev_Column)) * (AGNIFingerPrint_std_dev_AGNI_eta=8_00e-01 / ElementProperty_MagpieData_minimum_Number)) - 6.0e-2 * ((ElementProperty_MagpieData_range_MeltingT * ElementProperty_MagpieData_mean_AtomicWeight) * (ElementFraction_O⁶)) - 1.61 * (|(|ElectronegativityDiff_minimum_EN_difference - ElementProperty_MagpieData_mode_Electronegativity|) - (ElementProperty_MagpieData_maximum_NpUnfilled - Stoichiometry_0-norm)|) + 0.24 * ((AGNIFingerPrint_std_dev_AGNI_dir=y_eta=8_00e-01 * ElementProperty_MagpieData_minimum_Number) + (exp(-1.0 * ElementProperty_MagpieData_range_Number)))
+R²: 0.38
+    - D5: -8.7e-3 - 164.82 * (|(|ElementProperty_MagpieData_avg_dev_MendeleevNumber - ElementProperty_MagpieData_avg_dev_NUnfilled|) - (ElementProperty_MagpieData_maximum_Number / Stoichiometry_0-norm)|) - 3.5e-5 * ((exp(-1.0 * ElementProperty_MagpieData_avg_dev_Column)) * (AGNIFingerPrint_std_dev_AGNI_eta=8_00e-01 / ElementProperty_MagpieData_minimum_Number)) - 5.4e-2 * ((ElementProperty_MagpieData_range_MeltingT * ElementProperty_MagpieData_mean_AtomicWeight) * (ElementFraction_O⁶)) - 1.54 * (|(|ElectronegativityDiff_minimum_EN_difference - ElementProperty_MagpieData_mode_Electronegativity|) - (ElementProperty_MagpieData_maximum_NpUnfilled - Stoichiometry_0-norm)|) + 0.33 * ((AGNIFingerPrint_std_dev_AGNI_dir=y_eta=8_00e-01 * ElementProperty_MagpieData_minimum_Number) + (exp(-1.0 * ElementProperty_MagpieData_range_MeltingT)))
+R²: 0.42
+--------------------------------------------------
+
+Feature: SISSO_matbench_perovskites_#9
+  Full Formulas (All Dimensions):
+    - SISSO (D1): VoronoiFingerprint|mean Voro_dist_minimum (norm) + ElementFraction|N (norm)
+--------------------------------------------------
+
+Feature: coGN_ReadoutComponent1_Feature62_fold0
+  Full Formulas (All Dimensions):
+    - D1: -2.2e-3 + 1.08 * ((ElementProperty_MagpieData_range_Electronegativity * ElementProperty_MagpieData_maximum_MeltingT) * (ValenceOrbital_frac_d_valence_electrons - CrystalNNFingerprint_mean_linear_CN_2))
+R²: 0.44
+    - D2: 4.25 - 2.2e-3 * (|(CrystalNNFingerprint_mean_octahedral_CN_6 * ElementProperty_MagpieData_avg_dev_NUnfilled) - (AverageBondAngle_mean_Average_bond_angle⁶)|) + 0.21 * ((ElementProperty_MagpieData_range_Electronegativity * ElementProperty_MagpieData_range_MeltingT) * (ValenceOrbital_frac_d_valence_electrons - CrystalNNFingerprint_mean_linear_CN_2))
+R²: 0.53
+    - D3: 1.8e-5 + 7.0e-2 * ((CoulombMatrix_coulomb_matrix_eig_1 * ElementProperty_MagpieData_avg_dev_NUnfilled) / (ElementProperty_MagpieData_minimum_Electronegativity - ElementProperty_MagpieData_mean_NdUnfilled)) - 5.6e-3 * ((|ElementProperty_MagpieData_mean_NdUnfilled - CrystalNNFingerprint_mean_linear_CN_2|) / (|CrystalNNFingerprint_mean_octahedral_CN_6 - DensityFeatures_packing_fraction|)) + 0.59 * ((ValenceOrbital_frac_d_valence_electrons - CrystalNNFingerprint_mean_linear_CN_2) * (ElementProperty_MagpieData_maximum_MeltingT / ElementProperty_MagpieData_minimum_Electronegativity))
+R²: 0.60
+    - D4: 0.40 + 1.9e-5 * ((ElementProperty_MagpieData_mean_NdValence / DensityFeatures_packing_fraction) / (|MaximumPackingEfficiency_max_packing_efficiency - ElementProperty_MagpieData_mean_NdValence|)) + 6.8e-2 * ((CoulombMatrix_coulomb_matrix_eig_1 * ElementProperty_MagpieData_avg_dev_NUnfilled) / (ElementProperty_MagpieData_minimum_Electronegativity - ElementProperty_MagpieData_mean_NdUnfilled)) - 5.3e-3 * ((|ElementProperty_MagpieData_mean_NdUnfilled - CrystalNNFingerprint_mean_linear_CN_2|) / (|CrystalNNFingerprint_mean_octahedral_CN_6 - DensityFeatures_packing_fraction|)) - 0.55 * ((ValenceOrbital_frac_d_valence_electrons - CrystalNNFingerprint_mean_linear_CN_2) * (ElementProperty_MagpieData_maximum_MeltingT / ElementProperty_MagpieData_minimum_Electronegativity))
+R²: 0.65
+    - D5: 0.72 + 0.47 * (|(ElementProperty_MagpieData_minimum_GSvolume_pa * CrystalNNFingerprint_std_dev_linear_CN_2) - (ElementProperty_MagpieData_avg_dev_NUnfilled * ElementProperty_MagpieData_mean_NdValence)|) + 2.1e-5 * ((ElementProperty_MagpieData_mean_NdValence / DensityFeatures_packing_fraction) / (|MaximumPackingEfficiency_max_packing_efficiency - ElementProperty_MagpieData_mean_NdValence|)) + 6.5e-2 * ((CoulombMatrix_coulomb_matrix_eig_1 * ElementProperty_MagpieData_avg_dev_NUnfilled) / (ElementProperty_MagpieData_minimum_Electronegativity - ElementProperty_MagpieData_mean_NdUnfilled)) - 4.6e-3 * ((|ElementProperty_MagpieData_mean_NdUnfilled - CrystalNNFingerprint_mean_linear_CN_2|) / (|CrystalNNFingerprint_mean_octahedral_CN_6 - DensityFeatures_packing_fraction|)) - 1.67 * ((ValenceOrbital_frac_d_valence_electrons - CrystalNNFingerprint_mean_linear_CN_2) * (ElementProperty_MagpieData_maximum_MeltingT / ElementProperty_MagpieData_minimum_Electronegativity))
+R²: 0.70
+--------------------------------------------------
+

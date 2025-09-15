@@ -1,0 +1,32 @@
+{
+   "data_file": "../../SISSO_sampled_target_xgb_rfe.csv",
+   "property_key": "target",
+   "desc_dim": 5,
+   "n_sis_select": 15,
+   "max_rung": 2,
+   "n_residual": 2,
+   "calc_type": "regression",
+   "min_abs_feat_val": 1e-05,
+   "max_abs_feat_val": 100000000.0,
+   "n_models_store": 1,
+   "leave_out_frac": 0.1,
+   "leave_out_inds": [],
+   "opset": [
+      "add",
+      "sub",
+      "abs_diff",
+      "mult",
+      "div",
+      "inv",
+      "abs",
+      "exp",
+      "log",
+      "sq",
+      "cb",
+      "six_pow",
+      "sqrt",
+      "cbrt",
+      "neg_exp"
+   ],
+   "data_file_relative_to_json": true
+}

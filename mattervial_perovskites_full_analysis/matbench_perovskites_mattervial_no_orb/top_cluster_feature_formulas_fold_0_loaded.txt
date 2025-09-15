@@ -1,0 +1,49 @@
+--- Top Features from Each Cluster and Their Formulas (Fold 0) ---
+
+Feature: ℓ-MM_v1_#512
+  Full Formula: -2.94 + 10.20 * ((AverageBondLength_std_dev_Average_bond_length + MaximumPackingEfficiency_max_packing_efficiency) + (BondOrientationParameter_mean_BOOP_Q_l=5 * ElementProperty_MagpieData_mean_NpValence)) - 3.65 * (|(OPSiteFingerprint_std_dev_hexagonal_planar_CN_6 * ElementProperty_MagpieData_avg_dev_NpValence) - (OPSiteFingerprint_mean_q6_CN_12 + MaximumPackingEfficiency_max_packing_efficiency)|)
+R²: 0.83 (D2)
+--------------------------------------------------
+
+Feature: MVL16_Eform_MP_2019_#5
+  Full Formula: 2.9e-5 + 1.3e-2 * ((ElementProperty_MagpieData_minimum_MeltingT * ElementProperty_MagpieData_minimum_CovalentRadius) * (ElementFraction_Yb - IonProperty_avg_ionic_char)) + 3.8e-5 * ((ElementProperty_MagpieData_mode_NUnfilled / ElementProperty_MagpieData_mode_GSvolume_pa) / (|GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 - Miedema_Miedema_deltaH_amor|)) - 59.81 * ((ElementProperty_MagpieData_minimum_MeltingT * GaussianSymmFunc_mean_G2_80_0) * (ElementProperty_MagpieData_mode_NUnfilled * ElementProperty_MagpieData_avg_dev_MeltingT)) - 0.14 * ((GeneralizedRDF_mean_Gaussian_center=2_0_width=1_0 / ElementProperty_MagpieData_maximum_Column) - (ElementFraction_Mg / ElementProperty_MagpieData_mean_MendeleevNumber)) + 1.78 * ((|Stoichiometry_2-norm - ElementProperty_MagpieData_maximum_Column|) - (ElementProperty_MagpieData_mean_Electronegativity * Miedema_Miedema_deltaH_inter))
+R²: 0.65 (D5)
+--------------------------------------------------
+
+Feature: MVL32_Eform_MP_2019_#1
+  Full Formula: 0.18 - 2.8e-4 * ((ElementProperty_MagpieData_minimum_NdValence * DensityFeatures_density) / (YangSolidSolution_Yang_omega - ElementProperty_MagpieData_maximum_GSvolume_pa)) + 8.5e-4 * ((Miedema_Miedema_deltaH_amor * BandCenter_band_center) * (DensityFeatures_density³)) - 1.8e-6 * ((ElementProperty_MagpieData_mean_NdUnfilled * ℓ-OFM_v1_168) * (ValenceOrbital_frac_d_valence_electrons * ElementProperty_MagpieData_minimum_MendeleevNumber)) + 2.1e-7 * ((ElementProperty_MagpieData_avg_dev_MeltingT * ℓ-OFM_v1_172) * (ElementProperty_MagpieData_minimum_Electronegativity⁶)) - 0.71 * ((DensityFeatures_density³) * (ElementProperty_MagpieData_maximum_MeltingT * ElementProperty_MagpieData_minimum_Electronegativity))
+R²: 0.73 (D5)
+--------------------------------------------------
+
+Feature: MVL32_Eform_MP_2019_#10
+  Full Formula: 0.53 - 0.67 * ((ElementProperty_MagpieData_minimum_GSbandgap * ElementProperty_MagpieData_maximum_GSvolume_pa) / (|ℓ-OFM_v1_183 - ElementProperty_MagpieData_maximum_GSvolume_pa|))
+R²: 0.87 (D1)
+--------------------------------------------------
+
+Feature: MVL32_Eform_MP_2019_#3
+  Full Formula: 0.73 + 22.23 * ((ElementProperty_MagpieData_mean_NpValence * ElementProperty_MagpieData_avg_dev_NUnfilled) - (ℓ-OFM_v1_79 * ElectronegativityDiff_mean_EN_difference)) + 1.45 * ((|ElectronegativityDiff_mean_EN_difference - ElementProperty_MagpieData_avg_dev_Electronegativity|) * (exp(-1.0 * ValenceOrbital_frac_d_valence_electrons)))
+R²: 0.86 (D2)
+--------------------------------------------------
+
+Feature: ROOST_oqmd_eform_LayerMaterialPooling_#08
+  Full Formula: -1.8e-4 + 0.65 * ((ElementProperty_MagpieData_maximum_MeltingT * ElementFraction_O) * (ElementProperty_MagpieData_mean_NpUnfilled - ElementProperty_MagpieData_mode_NUnfilled)) + 2.42 * ((ElementProperty_MagpieData_mean_NsValence - ElementProperty_MagpieData_mean_NpUnfilled) / (Stoichiometry_0-norm³)) + 8.50 * (|(ValenceOrbital_frac_p_valence_electrons / Stoichiometry_0-norm) - (ElementFraction_O³)|) + 0.86 * ((Stoichiometry_10-norm / Stoichiometry_0-norm) * ln(Stoichiometry_3-norm))
+R²: 0.58 (D4)
+--------------------------------------------------
+
+Feature: ROOST_oqmd_eform_LayerMaterialPooling_#11
+  Full Formula: 2.49 - 0.29 * ((AtomicOrbitals_HOMO_energy + ElementFraction_O) * (ElementProperty_MagpieData_avg_dev_Row / ElementProperty_MagpieData_maximum_NValence)) + 0.20 * ((Stoichiometry_5-norm⁶) * (ElementProperty_MagpieData_minimum_Electronegativity - ElementProperty_MagpieData_mean_GSbandgap)) + 0.63 * ((AtomicOrbitals_HOMO_energy + YangSolidSolution_Yang_delta) / (|ElementProperty_MagpieData_minimum_Number - ElementProperty_MagpieData_range_GSvolume_pa|)) - 1.0e-4 * (|(ChemEnvSiteFingerprint_mean_BO_1:8 + MaximumPackingEfficiency_max_packing_efficiency) - (|YangSolidSolution_Yang_delta - ElementFraction_O|)|) - 0.30 * ((ElementProperty_MagpieData_minimum_Number / Stoichiometry_0-norm) * (ElementProperty_MagpieData_mean_Electronegativity⁶))
+R²: 0.39 (D5)
+--------------------------------------------------
+
+Feature: SISSO_matbench_log_gvrh_#17
+  Full Formula: YangSolidSolution|Yang delta (norm) + ElementProperty|MagpieData mean MeltingT (norm)
+--------------------------------------------------
+
+Feature: SISSO_matbench_mp_gap_#18
+  Full Formula: abs(BondFractions|O - Si bond frac. (norm) - ElementProperty|MagpieData range NdValence (norm))
+--------------------------------------------------
+
+Feature: SISSO_matbench_perovskites_#7
+  Full Formula: CrystalNNFingerprint|std_dev wt CN_2 (norm) + ElementProperty|MagpieData mean SpaceGroupNumber (norm)
+--------------------------------------------------
+
