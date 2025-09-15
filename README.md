@@ -12,7 +12,7 @@ This repository includes:
 - **Results for the autoencoder and previous version of MatterVial (pGNN)**: The detailed results testing the different descriptor-oriented featurizers (l-MM and l-OFM)and all results obtained from the previously less general package which are now on the SI of the paper.
   - `results_encoders_and_SI_data/`
   
-- **Featurized datasets and models**: Featurized datasets and final models for the main results of the paper. These are downloaded from [FigShare link](), a python script is provided to help with this.
+- **Featurized datasets and models**: Featurized datasets and final models for the main results of the paper. These are downloaded from [FigShare link](https://figshare.com/ndownloader/files/57963316), a python script is provided to help with this.
  - download_datasets_and_models.py
 
 - **Matbench v0.1 evaluation of MODNet@MatterVial models**: All general results
@@ -29,8 +29,7 @@ Correspond to Table 1 of the paper:
 Results table 2, focusing on matbench_perovskites dataset:
 
 - **MODNet@MatterVial with adjacent models**:
-  (COMING SOON)
-  - `mattervial_perovskites_full_analysis/`
+  - `mattervial_perovskites_full_analysis`
 <p align='center'>
 <img src=".github/Table2MatterVial.png" alt="benchmark results">
 </p>
