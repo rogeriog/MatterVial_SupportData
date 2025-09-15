@@ -82,7 +82,6 @@ RESULTS_select_later/
 ## removing other files
 running_scripts/
 *.sh
-*.py
 *.ipynb
 *.pdf
 *.txt
