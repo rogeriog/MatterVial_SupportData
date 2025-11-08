@@ -1,0 +1,133 @@
+Job started on Tue Oct 21 13:06:50 CEST 2025
+Running on node(s): cna049
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Warning: ORB models not available. Please install orb-models to use ORBFeaturizer.
+Initializing mattervial featurizers...
+Featurizers initialized.
+
+================================================================================
+🚀 STARTING TASK: alexandria5000test (Chunk 1 of 1)
+================================================================================
+
+Loading data from './sampled_5000_alexandria_walltime_test.csv'...
+Processing 5000 rows from index 0 to 4999
+Parsing structure data from 'structure' column...
+Generating chemical formulas from structures...
+Featurizing 5000 valid entries...
+Computing L_OFM features...
+2025-10-21 13:07:37.518079: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-21 13:08:23.527194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38482 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:85:00.0, compute capability: 8.0
+Total params: 644652 (2.46 MB)
+Processing 5000 structures with OFMEncoded_v1 model...
+Converting 5000 structures to graphs...
+Isolated atoms found in the structure. The cutoff radius might be small
+Warning: Structure at index 1796 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Successfully converted 4999/5000 structures.
+Failed to convert 1 structures.
+Predicting on 4999 structures using model.predict_structures...
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+2025-10-21 13:08:29.241079: I tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:606] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+    └── Time taken for L_OFM: 66.00 seconds
+Computing L_MM features...
+Total params: 681702 (2.60 MB)
+Processing 5000 structures with MatMinerEncoded_v1 model...
+Converting 5000 structures to graphs...
+Isolated atoms found in the structure. The cutoff radius might be small
+Warning: Structure at index 1796 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Successfully converted 4999/5000 structures.
+Failed to convert 1 structures.
+Predicting on 4999 structures using model.predict_structures...
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+    └── Time taken for L_MM: 13.76 seconds
+Computing MVL features...
+Preparing graphs for all 6 MVL models...
+Converting 5000 structures to graphs...
+Isolated atoms found in the structure. The cutoff radius might be small
+Warning: Structure at index 1796 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Isolated atoms found in the structure. The cutoff radius might be small
+Successfully converted 4999/5000 structures.
+Failed to convert 1 structures.
+Processing model: Eform_MP_2019 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model Eform_MP_2019.
+Processing model: Efermi_MP_2019 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model Efermi_MP_2019.
+Processing model: Bandgap_classifier_MP_2018 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model Bandgap_classifier_MP_2018.
+Processing model: Bandgap_MP_2018 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model Bandgap_MP_2018.
+Processing model: logK_MP_2019 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model logK_MP_2019.
+Processing model: logG_MP_2019 for all layers...
+Predicting on 4999 graphs sequentially...
+Features for all layers calculated for model logG_MP_2019.
+    └── Time taken for MVL: 1675.41 seconds
+Computing ROOST_MPGAP features...
+PyTorch version: 2.2.2+cu121
+CUDA available: True
+CUDA device count: 1
+Current CUDA device: 0
+Device name: NVIDIA A100-SXM4-40GB
+Using MP_GAP ROOST model from: /gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/mattervial-0.1.4-py3.9.egg/mattervial/featurizers/custom_models/mpgap_checkpoint-r0.pth.tar
+Model loaded successfully!
+
+Processing dataset: /tmp/tmpqxvd9eg4.csv
+    └── Time taken for ROOST_MPGAP: 6.95 seconds
+Computing ROOST_OQMD features...
+PyTorch version: 2.2.2+cu121
+CUDA available: True
+CUDA device count: 1
+Current CUDA device: 0
+Device name: NVIDIA A100-SXM4-40GB
+Using OQMD_Eform ROOST model from: /gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/mattervial-0.1.4-py3.9.egg/mattervial/featurizers/custom_models/oqmd_eform_checkpoint-r0.pth.tar
+Model loaded successfully!
+
+Processing dataset: /tmp/tmpwr21t72z.csv
+    └── Time taken for ROOST_OQMD: 5.85 seconds
+
+🕒 Total time spent on featurization: 1767.98 seconds
+Combining all features...
+Generated combined feature matrix with shape: (5000, 1491)
+✅ Successfully saved combined features to 'mv_noorb_featurized_data/all_features_alexandria5000test_chunk_1_of_1.csv'
+Writing timing log to 'mv_noorb_featurized_data/all_features_alexandria5000test_chunk_1_of_1.txt'...
+✅ Successfully saved timing log.
+
+--------------------------------------------------------------------------------
+🎉 COMPLETED TASK: alexandria5000test (Chunk 1 of 1)
+🕒 Total wall time for this task: 1776.93 seconds
+--------------------------------------------------------------------------------
+
+Job finished on Tue Oct 21 13:37:15 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 15GiB
+Total CPU Time                           - CPU_Time         : 00:30:25
+Execution Time                           - Wall_Time        : 00:30:25
+total programme cpu time                 - Total_CPU        : 28:35.520
+Total_CPU / CPU_Time  (%)                - ETA              : 93%
+Number of alloc CPU                      - NCPUS            : 1
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 1-08:26:40
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 1%
+Energy (Joules)                                             : unknown
+

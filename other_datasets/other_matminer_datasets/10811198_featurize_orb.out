@@ -1,0 +1,170 @@
+Job started on Thu Oct 16 15:53:34 CEST 2025
+Running on node(s): cna048
+/gpfs/scratch/acad/htforft/rgouvea/MatterVial/mattervial/featurizers/__init__.py:20: UserWarning: Composition featurizers not available: No module named 'torch_scatter'
+  warnings.warn(f"Composition featurizers not available: {e}")
+
+================================================================================
+🚀 STARTING TASK: double_perovskites_gap_1306_optimized
+================================================================================
+
+Loading data from './featurize_with_MM/double_perovskites_gap_1306_optimized.csv'...
+Parsing structure data from 'structure' column...
+Data loading and preparation complete.
+Computing ORB features for 1306 structures...
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/orb_env/lib/python3.11/site-packages/orb_models/utils.py:30: UserWarning: Setting global torch default dtype to torch.float32.
+  warnings.warn(f"Setting global torch default dtype to {torch_dtype}.")
+Processing structure 10/1306
+Processing structure 20/1306
+Processing structure 30/1306
+Processing structure 40/1306
+Processing structure 50/1306
+Processing structure 60/1306
+Processing structure 70/1306
+Processing structure 80/1306
+Processing structure 90/1306
+Processing structure 100/1306
+Processing structure 110/1306
+Processing structure 120/1306
+Processing structure 130/1306
+Processing structure 140/1306
+Processing structure 150/1306
+Processing structure 160/1306
+Processing structure 170/1306
+Processing structure 180/1306
+Processing structure 190/1306
+Processing structure 200/1306
+Processing structure 210/1306
+Processing structure 220/1306
+Processing structure 230/1306
+Processing structure 240/1306
+Processing structure 250/1306
+Processing structure 260/1306
+Processing structure 270/1306
+Processing structure 280/1306
+Processing structure 290/1306
+Processing structure 300/1306
+Processing structure 310/1306
+Processing structure 320/1306
+Processing structure 330/1306
+Processing structure 340/1306
+Processing structure 350/1306
+Processing structure 360/1306
+Processing structure 370/1306
+Processing structure 380/1306
+Processing structure 390/1306
+Processing structure 400/1306
+Processing structure 410/1306
+Processing structure 420/1306
+Processing structure 430/1306
+Processing structure 440/1306
+Processing structure 450/1306
+Processing structure 460/1306
+Processing structure 470/1306
+Processing structure 480/1306
+Processing structure 490/1306
+Processing structure 500/1306
+Processing structure 510/1306
+Processing structure 520/1306
+Processing structure 530/1306
+Processing structure 540/1306
+Processing structure 550/1306
+Processing structure 560/1306
+Processing structure 570/1306
+Processing structure 580/1306
+Processing structure 590/1306
+Processing structure 600/1306
+Processing structure 610/1306
+Processing structure 620/1306
+Processing structure 630/1306
+Processing structure 640/1306
+Processing structure 650/1306
+Processing structure 660/1306
+Processing structure 670/1306
+Processing structure 680/1306
+Processing structure 690/1306
+Processing structure 700/1306
+Processing structure 710/1306
+Processing structure 720/1306
+Processing structure 730/1306
+Processing structure 740/1306
+Processing structure 750/1306
+Processing structure 760/1306
+Processing structure 770/1306
+Processing structure 780/1306
+Processing structure 790/1306
+Processing structure 800/1306
+Processing structure 810/1306
+Processing structure 820/1306
+Processing structure 830/1306
+Processing structure 840/1306
+Processing structure 850/1306
+Processing structure 860/1306
+Processing structure 870/1306
+Processing structure 880/1306
+Processing structure 890/1306
+Processing structure 900/1306
+Processing structure 910/1306
+Processing structure 920/1306
+Processing structure 930/1306
+Processing structure 940/1306
+Processing structure 950/1306
+Processing structure 960/1306
+Processing structure 970/1306
+Processing structure 980/1306
+Processing structure 990/1306
+Processing structure 1000/1306
+Processing structure 1010/1306
+Processing structure 1020/1306
+Processing structure 1030/1306
+Processing structure 1040/1306
+Processing structure 1050/1306
+Processing structure 1060/1306
+Processing structure 1070/1306
+Processing structure 1080/1306
+Processing structure 1090/1306
+Processing structure 1100/1306
+Processing structure 1110/1306
+Processing structure 1120/1306
+Processing structure 1130/1306
+Processing structure 1140/1306
+Processing structure 1150/1306
+Processing structure 1160/1306
+Processing structure 1170/1306
+Processing structure 1180/1306
+Processing structure 1190/1306
+Processing structure 1200/1306
+Processing structure 1210/1306
+Processing structure 1220/1306
+Processing structure 1230/1306
+Processing structure 1240/1306
+Processing structure 1250/1306
+Processing structure 1260/1306
+Processing structure 1270/1306
+Processing structure 1280/1306
+Processing structure 1290/1306
+Processing structure 1300/1306
+Processing structure 1306/1306
+ORB features extracted: 1792 features for 1306 structures
+Generated feature matrix with shape: (1306, 1793)
+✅ Successfully saved features to 'orb_featurized_data/orb_features_double_perovskites_gap_1306_optimized.csv'
+
+--------------------------------------------------------------------------------
+🎉 COMPLETED TASK: double_perovskites_gap_1306_optimized
+🕒 Total wall time for this task: 65.51 seconds
+--------------------------------------------------------------------------------
+
+Job finished on Thu Oct 16 15:55:25 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 1.2GiB
+Total CPU Time                           - CPU_Time         : 00:01:53
+Execution Time                           - Wall_Time        : 00:01:53
+total programme cpu time                 - Total_CPU        : 00:55.576
+Total_CPU / CPU_Time  (%)                - ETA              : 48%
+Number of alloc CPU                      - NCPUS            : 1
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 02:00:32
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 1%
+Energy (Joules)                                             : unknown
+

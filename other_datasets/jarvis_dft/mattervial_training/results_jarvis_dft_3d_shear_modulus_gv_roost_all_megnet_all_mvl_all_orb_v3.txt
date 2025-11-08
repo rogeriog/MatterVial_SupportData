@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: shear_modulus_gv
+Data Path: jarvis_dft_3d_mattervial_features.csv
+Feature Sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+Job Prefix: jarvis_dft_3d_shear_modulus_gv_roost_all_megnet_all_mvl_all_orb_v3
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 2.9818, RMSE: 9.1527, R2: 0.9445, Uncertainty: 1.4024
+  Test  - MAE: 8.0614, RMSE: 16.4123, R2: 0.8258, Uncertainty: 2.8291
+
+Fold 1 Metrics:
+  Train - MAE: 3.0987, RMSE: 9.3613, R2: 0.9427, Uncertainty: 1.3333
+  Test  - MAE: 7.4563, RMSE: 14.5501, R2: 0.8558, Uncertainty: 2.5536
+
+Fold 2 Metrics:
+  Train - MAE: 3.8682, RMSE: 9.7473, R2: 0.9373, Uncertainty: 2.7269
+  Test  - MAE: 8.0022, RMSE: 16.2714, R2: 0.8262, Uncertainty: 3.8745
+
+Fold 3 Metrics:
+  Train - MAE: 3.1492, RMSE: 9.6800, R2: 0.9391, Uncertainty: 1.6671
+  Test  - MAE: 7.5118, RMSE: 14.4627, R2: 0.8537, Uncertainty: 3.2037
+
+Fold 4 Metrics:
+  Train - MAE: 3.2842, RMSE: 9.5321, R2: 0.9391, Uncertainty: 1.8776
+  Test  - MAE: 7.7305, RMSE: 14.6280, R2: 0.8674, Uncertainty: 3.5075
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 3.2764, RMSE: 9.4947, R2: 0.9405
+  Train - Uncertainty: 1.8015
+  Test  - MAE: 7.7524, RMSE: 15.2649, R2: 0.8458
+  Test  - Uncertainty: 3.1937
+

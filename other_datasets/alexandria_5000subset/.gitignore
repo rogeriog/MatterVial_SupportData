@@ -1,0 +1,5 @@
+all_chunks/
+mv_noorb_featurized_data/
+mv_noorb_featurized_nogpu/
+mv_noorb_featurized_data_nogpu/
+mv_orb_featurized_data/

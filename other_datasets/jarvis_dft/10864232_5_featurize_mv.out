@@ -1,0 +1,125 @@
+Job started on Mon Oct 20 14:46:20 CEST 2025
+Running on node(s): cnm024
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Warning: ORB models not available. Please install orb-models to use ORBFeaturizer.
+Initializing mattervial featurizers...
+Featurizers initialized.
+
+================================================================================
+🚀 STARTING TASK: jarvis_dft_3d (Chunk 5 of 5)
+================================================================================
+
+Loading data from './jarvis_dft_3d_with_structures.csv'...
+/gpfs/scratch/acad/htforft/rgouvea/other_datasets/jarvis_dft/mattervial_featurizer_noorb.py:209: DtypeWarning: Columns (23,28) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(csv_path)
+Processing 15198 rows from index 60795 to 75992
+Parsing structure data from 'structure' column...
+Generating chemical formulas from structures...
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/pymatgen/core/periodic_table.py:120: UserWarning: No Pauling electronegativity for He. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.
+  warnings.warn(
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/pymatgen/core/periodic_table.py:120: UserWarning: No Pauling electronegativity for Ne. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.
+  warnings.warn(
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/pymatgen/core/periodic_table.py:120: UserWarning: No Pauling electronegativity for Ar. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.
+  warnings.warn(
+Data loading and preparation complete for this chunk.
+Featurizing 15198 valid entries...
+Computing L_OFM features...
+2025-10-20 14:47:17.695124: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Total params: 644652 (2.46 MB)
+Processing 15198 structures with OFMEncoded_v1 model...
+Converting 15198 structures to graphs...
+Warning: Structure at index 311 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 5407 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 6149 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 8314 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 10934 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 11531 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Successfully converted 15192/15198 structures.
+Failed to convert 6 structures.
+Predicting on 15192 structures using model.predict_structures...
+Computing L_MM features...
+Total params: 681702 (2.60 MB)
+Processing 15198 structures with MatMinerEncoded_v1 model...
+Converting 15198 structures to graphs...
+Warning: Structure at index 311 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 5407 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 6149 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 8314 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 10934 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 11531 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Successfully converted 15192/15198 structures.
+Failed to convert 6 structures.
+Predicting on 15192 structures using model.predict_structures...
+Computing MVL features...
+Preparing graphs for all 6 MVL models...
+Converting 15198 structures to graphs...
+Warning: Structure at index 311 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 5407 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 6149 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 8314 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 10934 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Warning: Structure at index 11531 failed conversion: The cutoff is too small, resulting in material graph with no bonds
+Successfully converted 15192/15198 structures.
+Failed to convert 6 structures.
+Processing model: Eform_MP_2019 for all layers...
+Predicting on 15192 graphs sequentially...
+WARNING:tensorflow:5 out of the last 126 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7fb989ff11f0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+Features for all layers calculated for model Eform_MP_2019.
+Processing model: Efermi_MP_2019 for all layers...
+Predicting on 15192 graphs sequentially...
+Features for all layers calculated for model Efermi_MP_2019.
+Processing model: Bandgap_classifier_MP_2018 for all layers...
+Predicting on 15192 graphs sequentially...
+Features for all layers calculated for model Bandgap_classifier_MP_2018.
+Processing model: Bandgap_MP_2018 for all layers...
+Predicting on 15192 graphs sequentially...
+Features for all layers calculated for model Bandgap_MP_2018.
+Processing model: logK_MP_2019 for all layers...
+Predicting on 15192 graphs sequentially...
+Features for all layers calculated for model logK_MP_2019.
+Processing model: logG_MP_2019 for all layers...
+Predicting on 15192 graphs sequentially...
+Features for all layers calculated for model logG_MP_2019.
+Computing ROOST_MPGAP features...
+PyTorch version: 2.2.2+cu121
+CUDA available: False
+Using MP_GAP ROOST model from: /gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/mattervial-0.1.4-py3.9.egg/mattervial/featurizers/custom_models/mpgap_checkpoint-r0.pth.tar
+Model loaded successfully!
+
+Processing dataset: /tmp/tmp5rat6ea3.csv
+Processed batch 200...
+Processed batch 400...
+Computing ROOST_OQMD features...
+PyTorch version: 2.2.2+cu121
+CUDA available: False
+Using OQMD_Eform ROOST model from: /gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/ML39/lib/python3.9/site-packages/mattervial-0.1.4-py3.9.egg/mattervial/featurizers/custom_models/oqmd_eform_checkpoint-r0.pth.tar
+Model loaded successfully!
+
+Processing dataset: /tmp/tmpec0z0r4o.csv
+Processed batch 200...
+Processed batch 400...
+Combining all features...
+Generated combined feature matrix with shape: (15198, 1491)
+✅ Successfully saved combined features to 'mv_noorb_featurized_data/all_features_jarvis_dft_3d_chunk_5_of_5.csv'
+
+--------------------------------------------------------------------------------
+🎉 COMPLETED TASK: jarvis_dft_3d (Chunk 5 of 5)
+🕒 Total wall time for this task: 5793.79 seconds
+--------------------------------------------------------------------------------
+
+Job finished on Mon Oct 20 16:23:45 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 44GiB
+Total CPU Time                           - CPU_Time         : 1-19:39:44
+Execution Time                           - Wall_Time        : 01:21:52
+total programme cpu time                 - Total_CPU        : 01:53:04
+Total_CPU / CPU_Time  (%)                - ETA              : 4%
+Number of alloc CPU                      - NCPUS            : 32
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 48
+Mobilized Resources x Execution Time     - R_Wall_Time      : 2-17:29:36
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 66%
+Energy (Joules)                                             : unknown
+

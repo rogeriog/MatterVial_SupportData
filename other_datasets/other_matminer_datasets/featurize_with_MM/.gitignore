@@ -1,0 +1,4 @@
+test_data/
+train_data/
+out/
+*.csv

@@ -1,0 +1,145 @@
+Job started on Fri Oct 24 18:00:33 CEST 2025
+Running on node(s): cns270
+========================================================
+SLURM Task ID: 3
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: optb88vdw_total_energy
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-24 18:00:37.903721: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-24 18:00:40.650505: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:00:40.651041: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-24 18:00:40.651096: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-24 18:00:40.651147: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns270.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-24 18:01:21,120 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f0)...
+2025-10-24 18:01:21,445 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d1c44d60> object, created with modnet version 0.1.13
+2025-10-24 18:01:21,519 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d290da90> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 0: Processing complete.
+Fold 1: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f1)...
+2025-10-24 18:01:21,752 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d290dbe0> object, created with modnet version 0.1.13
+2025-10-24 18:01:21,825 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d1c44e80> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 1: Processing complete.
+Fold 2: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f2)...
+2025-10-24 18:01:22,077 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d46d8520> object, created with modnet version 0.1.13
+2025-10-24 18:01:22,159 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d1a8bac0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 2: Processing complete.
+Fold 3: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f3)...
+2025-10-24 18:01:22,400 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48ce3712e0> object, created with modnet version 0.1.13
+2025-10-24 18:01:22,470 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48cb25a070> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 3: Processing complete.
+Fold 4: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f4)...
+2025-10-24 18:01:22,714 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48d3c901c0> object, created with modnet version 0.1.13
+2025-10-24 18:01:22,792 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f48cea0ae50> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 4: Processing complete.
+
+Starting model training across 5 folds using 'ga' strategy...
+
+--- Processing Fold 0 ---
+  Train data shape: (60794, 800), Test data shape: (15199, 800)
+Fold 0: Loading pre-trained model from out/MODNet_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f0_ga.pkl
+2025-10-24 18:01:22.815648: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:01:22,922 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f48d290dcd0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 0: Evaluating model...
+2025-10-24 18:01:23.820404: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-10-24 18:01:23.833164: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2445535000 Hz
+Fold 0 - Train MAE: 0.0160, RMSE: 0.0575, R2: 0.9993, Uncertainty: 0.0189
+Fold 0 - Test MAE: 0.0208, RMSE: 0.0717, R2: 0.9989, Uncertainty: 0.0199
+
+--- Processing Fold 1 ---
+  Train data shape: (60794, 800), Test data shape: (15199, 800)
+Fold 1: Loading pre-trained model from out/MODNet_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f1_ga.pkl
+2025-10-24 18:01:34,022 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f48d290dcd0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 1: Evaluating model...
+Fold 1 - Train MAE: 0.0225, RMSE: 0.0599, R2: 0.9992, Uncertainty: 0.0158
+Fold 1 - Test MAE: 0.0251, RMSE: 0.0526, R2: 0.9994, Uncertainty: 0.0168
+
+--- Processing Fold 2 ---
+  Train data shape: (60794, 800), Test data shape: (15199, 800)
+Fold 2: Loading pre-trained model from out/MODNet_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f2_ga.pkl
+2025-10-24 18:01:40,760 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f48cfed31f0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 2: Evaluating model...
+Fold 2 - Train MAE: 0.0167, RMSE: 0.0451, R2: 0.9996, Uncertainty: 0.0164
+Fold 2 - Test MAE: 0.0209, RMSE: 0.0700, R2: 0.9989, Uncertainty: 0.0179
+
+--- Processing Fold 3 ---
+  Train data shape: (60795, 800), Test data shape: (15198, 800)
+Fold 3: Loading pre-trained model from out/MODNet_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f3_ga.pkl
+2025-10-24 18:01:48,617 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f48d0440b20> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 3: Evaluating model...
+Fold 3 - Train MAE: 0.0173, RMSE: 0.0452, R2: 0.9996, Uncertainty: 0.0159
+Fold 3 - Test MAE: 0.0226, RMSE: 0.0493, R2: 0.9995, Uncertainty: 0.0174
+
+--- Processing Fold 4 ---
+  Train data shape: (60795, 800), Test data shape: (15198, 800)
+Fold 4: Loading pre-trained model from out/MODNet_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3_f4_ga.pkl
+2025-10-24 18:01:56,167 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f48d3cd7580> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 4: Evaluating model...
+Fold 4 - Train MAE: 0.0205, RMSE: 0.0620, R2: 0.9992, Uncertainty: 0.0199
+Fold 4 - Test MAE: 0.0266, RMSE: 0.0695, R2: 0.9989, Uncertainty: 0.0208
+
+--- Aggregating Results ---
+Average Metrics across 5/5 successful folds:
+  Train - MAE: 0.0186, RMSE: 0.0539, R2: 0.9994
+  Train - Uncertainty: 0.0174
+  Test  - MAE: 0.0232, RMSE: 0.0626, R2: 0.9991
+  Test  - Uncertainty: 0.0185
+Could not save detailed predictions: "['optb88vdw_total_energy'] not in index"
+
+MODNet training run 'jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3' finished.
+Results summary saved to: results_jarvis_dft_3d_optb88vdw_total_energy_roost_all_megnet_all_mvl_all_orb_v3.txt
+Fold models saved in: out
+=== Finished MODNET_TRAIN ===
+Job finished on Fri Oct 24 18:02:05 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 9.6GiB
+Total CPU Time                           - CPU_Time         : 02:12:16
+Execution Time                           - Wall_Time        : 00:02:04
+total programme cpu time                 - Total_CPU        : 02:01.680
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 02:12:16
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

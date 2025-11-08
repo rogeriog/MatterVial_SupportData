@@ -1,0 +1,7 @@
+Job started on Wed Oct 15 16:28:48 CEST 2025
+Running on node(s): cns265
+Executing Task ID: 1
+Running command for double_perovskites_gap_1306.csv
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/modnet2020/bin/python3: can't open file 'mastercript_modnet.py': [Errno 2] No such file or directory
+srun: error: cns265: task 0: Exited with exit code 2
+Job finished on Wed Oct 15 16:29:05 CEST 2025

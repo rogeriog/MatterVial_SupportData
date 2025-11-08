@@ -1,0 +1,132 @@
+Job started on Fri Oct 24 18:04:02 CEST 2025
+Running on node(s): cns264
+========================================================
+SLURM Task ID: 10
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: spillage
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-24 18:04:04.989552: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-24 18:04:06.669440: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:04:06.669818: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-24 18:04:06.669850: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-24 18:04:06.669884: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns264.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3
+Dropped 64616 rows with NaN values in the target column ('spillage').
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-24 18:04:45,483 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f0)...
+2025-10-24 18:04:45,684 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26db0091c0> object, created with modnet version 0.1.13
+2025-10-24 18:04:45,750 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26de206fd0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 0: Processing complete.
+Fold 1: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f1)...
+2025-10-24 18:04:45,814 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26db009220> object, created with modnet version 0.1.13
+2025-10-24 18:04:45,843 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26db0baf10> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 1: Processing complete.
+Fold 2: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f2)...
+2025-10-24 18:04:45,893 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26db0099a0> object, created with modnet version 0.1.13
+2025-10-24 18:04:45,922 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26dc5faee0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 2: Processing complete.
+Fold 3: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f3)...
+2025-10-24 18:04:45,974 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26e0382340> object, created with modnet version 0.1.13
+2025-10-24 18:04:46,002 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26dbac0a90> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 3: Processing complete.
+Fold 4: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f4)...
+2025-10-24 18:04:46,052 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26de47f7f0> object, created with modnet version 0.1.13
+2025-10-24 18:04:46,080 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f26e1ce7100> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 4: Processing complete.
+
+Starting model training across 5 folds using 'ga' strategy...
+
+--- Processing Fold 0 ---
+  Train data shape: (9101, 800), Test data shape: (2276, 800)
+Fold 0: Loading pre-trained model from out/MODNet_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f0_ga.pkl
+2025-10-24 18:04:46.099745: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:04:46,202 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f26de206f70> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 0: Evaluating model...
+2025-10-24 18:04:46.341898: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-10-24 18:04:46.354431: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2445505000 Hz
+Fold 0 - Train MAE: 0.1287, RMSE: 0.3067, R2: 0.7800, Uncertainty: 0.0605
+Fold 0 - Test MAE: 0.3255, RMSE: 0.5147, R2: 0.4060, Uncertainty: 0.1095
+
+--- Processing Fold 1 ---
+  Train data shape: (9101, 800), Test data shape: (2276, 800)
+Fold 1: Loading pre-trained model from out/MODNet_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f1_ga.pkl
+2025-10-24 18:04:47,998 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f26db0c80d0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 1: Evaluating model...
+Fold 1 - Train MAE: 0.1333, RMSE: 0.3235, R2: 0.7583, Uncertainty: 0.0653
+Fold 1 - Test MAE: 0.3296, RMSE: 0.5110, R2: 0.3843, Uncertainty: 0.1287
+
+--- Processing Fold 2 ---
+  Train data shape: (9102, 800), Test data shape: (2275, 800)
+Fold 2: Loading pre-trained model from out/MODNet_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f2_ga.pkl
+2025-10-24 18:04:49,518 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f26dff639d0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 2: Evaluating model...
+Fold 2 - Train MAE: 0.1311, RMSE: 0.3115, R2: 0.7748, Uncertainty: 0.0605
+Fold 2 - Test MAE: 0.3269, RMSE: 0.5044, R2: 0.4113, Uncertainty: 0.1025
+
+--- Processing Fold 3 ---
+  Train data shape: (9102, 800), Test data shape: (2275, 800)
+Fold 3: Loading pre-trained model from out/MODNet_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f3_ga.pkl
+2025-10-24 18:04:51,200 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f26dae43130> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 3: Evaluating model...
+Fold 3 - Train MAE: 0.1301, RMSE: 0.3174, R2: 0.7677, Uncertainty: 0.0570
+Fold 3 - Test MAE: 0.3186, RMSE: 0.5107, R2: 0.3810, Uncertainty: 0.1044
+
+--- Processing Fold 4 ---
+  Train data shape: (9102, 800), Test data shape: (2275, 800)
+Fold 4: Loading pre-trained model from out/MODNet_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3_f4_ga.pkl
+2025-10-24 18:04:52,949 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f26dae43130> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 4: Evaluating model...
+Fold 4 - Train MAE: 0.1373, RMSE: 0.3149, R2: 0.7699, Uncertainty: 0.0857
+Fold 4 - Test MAE: 0.3318, RMSE: 0.5286, R2: 0.3535, Uncertainty: 0.1386
+
+--- Aggregating Results ---
+Average Metrics across 5/5 successful folds:
+  Train - MAE: 0.1321, RMSE: 0.3148, R2: 0.7701
+  Train - Uncertainty: 0.0658
+  Test  - MAE: 0.3265, RMSE: 0.5139, R2: 0.3872
+  Test  - Uncertainty: 0.1168
+Could not save detailed predictions: "['spillage'] not in index"
+
+MODNet training run 'jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3' finished.
+Results summary saved to: results_jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3.txt
+Fold models saved in: out
+=== Finished MODNET_TRAIN ===
+Job finished on Fri Oct 24 18:04:55 CEST 2025

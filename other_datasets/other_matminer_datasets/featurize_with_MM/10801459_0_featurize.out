@@ -1,0 +1,21 @@
+Job started on Wed Oct 15 16:28:48 CEST 2025
+Running on node(s): cns265
+Executing Task ID: 0
+Running command for m2ax_223.csv
+/gpfs/home/acad/ucl-modl/rgouvea/miniconda3/envs/modnet2020/bin/python3: can't open file 'mastercript_modnet.py': [Errno 2] No such file or directory
+srun: error: cns265: task 0: Exited with exit code 2
+Job finished on Wed Oct 15 16:29:05 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:01:12
+Execution Time                           - Wall_Time        : 00:00:18
+total programme cpu time                 - Total_CPU        : 00:01.151
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 4
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 22
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:06:36
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 18%
+Energy (Joules)                                             : unknown
+

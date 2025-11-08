@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: target
+Data Path: double_perovskites_gap_1306_featurizedMM2020Struct.csv
+Feature Sets: ['matminer']
+Job Prefix: double_perovskites_gap_matminer
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 0.1164, RMSE: 0.2117, R2: 0.9824, Uncertainty: 0.0826
+  Test  - MAE: 0.2328, RMSE: 0.3270, R2: 0.9536, Uncertainty: 0.0992
+
+Fold 1 Metrics:
+  Train - MAE: 0.1129, RMSE: 0.2072, R2: 0.9828, Uncertainty: 0.0927
+  Test  - MAE: 0.2621, RMSE: 0.3521, R2: 0.9508, Uncertainty: 0.1138
+
+Fold 2 Metrics:
+  Train - MAE: 0.1262, RMSE: 0.2238, R2: 0.9800, Uncertainty: 0.0951
+  Test  - MAE: 0.2565, RMSE: 0.3645, R2: 0.9463, Uncertainty: 0.1189
+
+Fold 3 Metrics:
+  Train - MAE: 0.1201, RMSE: 0.2329, R2: 0.9772, Uncertainty: 0.1136
+  Test  - MAE: 0.2495, RMSE: 0.3410, R2: 0.9610, Uncertainty: 0.1363
+
+Fold 4 Metrics:
+  Train - MAE: 0.1350, RMSE: 0.2361, R2: 0.9784, Uncertainty: 0.0920
+  Test  - MAE: 0.2518, RMSE: 0.3327, R2: 0.9490, Uncertainty: 0.1126
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 0.1221, RMSE: 0.2223, R2: 0.9801
+  Train - Uncertainty: 0.0952
+  Test  - MAE: 0.2505, RMSE: 0.3435, R2: 0.9521
+  Test  - Uncertainty: 0.1161
+

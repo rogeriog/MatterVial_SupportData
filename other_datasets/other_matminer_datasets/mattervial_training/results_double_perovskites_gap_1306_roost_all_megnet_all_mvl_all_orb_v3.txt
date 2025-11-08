@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: target
+Data Path: double_perovskites_gap_1306_mattervial_features.csv
+Feature Sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+Job Prefix: double_perovskites_gap_1306_roost_all_megnet_all_mvl_all_orb_v3
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 0.0987, RMSE: 0.1634, R2: 0.9895, Uncertainty: 0.1081
+  Test  - MAE: 0.1604, RMSE: 0.2225, R2: 0.9785, Uncertainty: 0.1141
+
+Fold 1 Metrics:
+  Train - MAE: 0.0817, RMSE: 0.1518, R2: 0.9908, Uncertainty: 0.0714
+  Test  - MAE: 0.1543, RMSE: 0.2087, R2: 0.9827, Uncertainty: 0.0927
+
+Fold 2 Metrics:
+  Train - MAE: 0.0849, RMSE: 0.1461, R2: 0.9915, Uncertainty: 0.0839
+  Test  - MAE: 0.1784, RMSE: 0.3033, R2: 0.9628, Uncertainty: 0.1002
+
+Fold 3 Metrics:
+  Train - MAE: 0.0757, RMSE: 0.1482, R2: 0.9908, Uncertainty: 0.0621
+  Test  - MAE: 0.1722, RMSE: 0.2511, R2: 0.9789, Uncertainty: 0.0789
+
+Fold 4 Metrics:
+  Train - MAE: 0.0718, RMSE: 0.1324, R2: 0.9932, Uncertainty: 0.0643
+  Test  - MAE: 0.1664, RMSE: 0.2393, R2: 0.9736, Uncertainty: 0.0867
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 0.0826, RMSE: 0.1484, R2: 0.9911
+  Train - Uncertainty: 0.0780
+  Test  - MAE: 0.1663, RMSE: 0.2450, R2: 0.9753
+  Test  - Uncertainty: 0.0945
+

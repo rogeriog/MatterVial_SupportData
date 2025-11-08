@@ -1,0 +1,230 @@
+boltztrap_mp¶
+
+Effective mass and thermoelectric properties of 8924 compounds in The Materials Project database that are calculated by the BoltzTraP software package run on the GGA-PBE or GGA+U density functional theory calculation results. The properties are reported at the temperature of 300 Kelvin and the carrier concentration of 1e18 1/cm3.
+
+Number of entries: 8924
+
+Column
+	
+
+Description
+
+formula
+	
+
+Chemical formula of the entry
+
+m_n
+	
+
+n-type/conduction band effective mass. Units: m_e where m_e is the mass of an electron; i.e. m_n is a unitless ratio
+
+m_p
+	
+
+p-type/valence band effective mass.
+
+mpid
+	
+
+Materials Project identifier
+
+pf_n
+	
+
+n-type thermoelectric power factor in uW/cm2.K where uW is microwatts and a constant relaxation time of 1e-14 assumed.
+
+pf_p
+	
+
+p-type power factor in uW/cm2.K
+
+s_n
+	
+
+n-type Seebeck coefficient in micro Volts per Kelvin
+
+s_p
+	
+
+p-type Seebeck coefficient in micro Volts per Kelvin
+
+structure
+	
+
+pymatgen Structure object describing the crystal structure of the material
+
+Reference
+
+Ricci, F. et al. An ab initio electronic transport database for inorganic materials. Sci. Data 4:170085 doi: 10.1038/sdata.2017.85 (2017). Ricci F, Chen W, Aydemir U, Snyder J, Rignanese G, Jain A, Hautier G (2017) Data from: An ab initio electronic transport database for inorganic materials. Dryad Digital Repository. https://doi.org/10.5061/dryad.gn001
+
++++++++++++++++++
+double_perovskites_gap
+
+Band gap of 1306 double perovskites (a_1-b_1-a_2-b_2-O6) calculated using ﻿Gritsenko, van Leeuwen, van Lenthe and Baerends potential (gllbsc) in GPAW.
+
+Number of entries: 1306
+
+Column
+	
+
+Description
+
+a_1
+	
+
+Species occupying the a1 perovskite site
+
+a_2
+	
+
+Species occupying the a2 site
+
+b_1
+	
+
+Species occupying the b1 site
+
+b_2
+	
+
+Species occupying the b2 site
+
+formula
+	
+
+Chemical formula of the entry
+
+gap gllbsc
+	
+
+electronic band gap (in eV) calculated via gllbsc
+
+Reference
+
+Dataset discussed in: Pilania, G. et al. Machine learning bandgaps of double perovskites. Sci. Rep. 6, 19375; doi: 10.1038/srep19375 (2016). Dataset sourced from: https://cmr.fysik.dtu.dk/
+++++++++++++++++
+m2ax
+
+Elastic properties of 223 stable M2AX compounds from “A comprehensive survey of M2AX phase elastic properties” by Cover et al. Calculations are PAW PW91.
+
+Number of entries: 223
+
+Column
+	
+
+Description
+
+a
+	
+
+Lattice parameter a, in A (angstrom)
+
+bulk modulus
+	
+
+In GPa
+
+c
+	
+
+lattice parameter c, in A (angstrom)
+
+c11
+	
+
+Elastic constants of the M2AX material. These are specific to hexagonal materials.
+
+c12
+	
+
+Elastic constants of the M2AX material. These are specific to hexagonal materials.
+
+c13
+	
+
+Elastic constants of the M2AX material. These are specific to hexagonal materials.
+
+c33
+	
+
+Elastic constants of the M2AX material. These are specific to hexagonal materials.
+
+c44
+	
+
+Elastic constants of the M2AX material. These are specific to hexagonal materials.
+
+d_ma
+	
+
+distance from the M atom to the A atom
+
+d_mx
+	
+
+distance from the M atom to the X atom
+
+elastic modulus
+	
+
+In GPa
+
+formula
+	
+
+chemical formula
+
+shear modulus
+	
+
+In GPa
+
+Reference
+
+http://iopscience.iop.org/article/10.1088/0953-8984/21/30/305403/meta
++++++++++++++++++
+tholander_nitrides
+
+A challenging data set for quantum machine learning containing a diverse set of 12.8k polymorphs in the Zn-Ti-N, Zn-Zr-N and Zn-Hf-N chemical systems. The phase diagrams of the Ti-Zn-N, Zr-Zn-N, and Hf-Zn-N systems are determined using large-scale high-throughput density functional calculations (DFT-GGA) (PBE). In total 12,815 relaxed structures are shared alongside their energy calculated using the VASP DFT code. The High-Throughput Toolkit was used to manage the calculations. Data adapted and deduplicated from the original data on Zenodo at https://zenodo.org/record/5530535#.YjJ3ZhDMJLQ, published under MIT licence. Collated from separate files of chemical systems and deduplicated according to identical structures matching ht_ids. Prepared in collaboration with Rhys Goodall.
+
+Number of entries: 12815
+
+Column
+	
+
+Description
+
+material_id
+	
+
+Human readable identifier for each material.
+
+ht_id
+	
+
+Unique identifier to track the calculation in httk
+
+initial_structure
+	
+
+A pymatgen structure object representing the structure before relaxation.
+
+final_structure
+	
+
+A pymatgen structure object representing the structure after relaxation.
+
+E_vasp_per_atom
+	
+
+The VASP calculated energy per atom for the final structure, in eV/atom
+
+chemical_system
+	
+
+The chemical system represented by the atoms actually contained in the structure
+
+Reference
+
+https://zenodo.org/record/5530535#.YjJ3ZhDMJLQ

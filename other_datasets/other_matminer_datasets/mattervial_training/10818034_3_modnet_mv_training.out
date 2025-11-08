@@ -1,0 +1,140 @@
+Job started on Fri Oct 17 01:34:31 CEST 2025
+Running on node(s): cnm027
+Task ID: 3
+Selected features: roost_all megnet_all mvl_all orb_v3
+Data path: m2ax_223_mattervial_features.csv
+Suffix: m2ax_223
+=== Action: MODNET_TRAIN ===
+2025-10-17 01:35:08.746691: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-17 01:35:23.290657: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-17 01:35:23.291190: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-17 01:35:23.291237: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-17 01:35:23.291281: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cnm027.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from m2ax_223_mattervial_features.csv ...
+Using job prefix: m2ax_223_roost_all_megnet_all_mvl_all_orb_v3
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-17 01:35:23,943 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Loading pre-processed train and test MODData from disk (m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f0)...
+2025-10-17 01:35:24,025 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cefa6a3a0> object, created with modnet version 0.1.13
+2025-10-17 01:35:24,041 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cefa6a400> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 0: Processing complete.
+Fold 1: Loading pre-processed train and test MODData from disk (m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f1)...
+2025-10-17 01:35:24,066 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cefa6a430> object, created with modnet version 0.1.13
+2025-10-17 01:35:24,084 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cefa6a610> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 1: Processing complete.
+Fold 2: Loading pre-processed train and test MODData from disk (m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f2)...
+2025-10-17 01:35:24,108 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cefa6a340> object, created with modnet version 0.1.13
+2025-10-17 01:35:24,125 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cef8be4c0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 2: Processing complete.
+Fold 3: Loading pre-processed train and test MODData from disk (m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f3)...
+2025-10-17 01:35:24,149 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cef1c5940> object, created with modnet version 0.1.13
+2025-10-17 01:35:24,167 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cef14efa0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 3: Processing complete.
+Fold 4: Loading pre-processed train and test MODData from disk (m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f4)...
+2025-10-17 01:35:24,194 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cef261160> object, created with modnet version 0.1.13
+2025-10-17 01:35:24,211 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7f5cee8f6e20> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 4: Processing complete.
+
+Starting model training across 5 folds using 'ga' strategy...
+
+--- Processing Fold 0 ---
+  Train data shape: (178, 800), Test data shape: (45, 800)
+Fold 0: Loading pre-trained model from out/MODNet_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f0_ga.pkl
+2025-10-17 01:35:24.243386: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-17 01:35:24,401 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f5cee935160> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 0: Evaluating model...
+2025-10-17 01:35:24.680803: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-10-17 01:35:24.692882: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2445430000 Hz
+Fold 0 - Train MAE: 4.7115, RMSE: 9.1195, R2: 0.9537, Uncertainty: 4.5240
+Fold 0 - Test MAE: 7.7191, RMSE: 12.2557, R2: 0.9014, Uncertainty: 4.0966
+
+--- Processing Fold 1 ---
+  Train data shape: (178, 800), Test data shape: (45, 800)
+Fold 1: Loading pre-trained model from out/MODNet_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f1_ga.pkl
+2025-10-17 01:35:25,401 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f5cee039070> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 1: Evaluating model...
+Fold 1 - Train MAE: 4.5883, RMSE: 11.6112, R2: 0.9149, Uncertainty: 1.7723
+Fold 1 - Test MAE: 9.0292, RMSE: 11.6621, R2: 0.9423, Uncertainty: 2.2723
+
+--- Processing Fold 2 ---
+  Train data shape: (178, 800), Test data shape: (45, 800)
+Fold 2: Loading pre-trained model from out/MODNet_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f2_ga.pkl
+2025-10-17 01:35:25,834 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f5cedc21e50> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 2: Evaluating model...
+Fold 2 - Train MAE: 3.9569, RMSE: 8.6805, R2: 0.9595, Uncertainty: 2.4438
+Fold 2 - Test MAE: 9.0432, RMSE: 14.3315, R2: 0.8344, Uncertainty: 2.6520
+
+--- Processing Fold 3 ---
+  Train data shape: (179, 800), Test data shape: (44, 800)
+Fold 3: Loading pre-trained model from out/MODNet_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f3_ga.pkl
+2025-10-17 01:35:26,264 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f5cefde10d0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 3: Evaluating model...
+Fold 3 - Train MAE: 3.6684, RMSE: 6.7935, R2: 0.9740, Uncertainty: 2.3937
+Fold 3 - Test MAE: 10.6115, RMSE: 14.7880, R2: 0.8643, Uncertainty: 2.9114
+
+--- Processing Fold 4 ---
+  Train data shape: (179, 800), Test data shape: (44, 800)
+Fold 4: Loading pre-trained model from out/MODNet_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3_f4_ga.pkl
+2025-10-17 01:35:26,695 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7f5cef8f74f0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 4: Evaluating model...
+Fold 4 - Train MAE: 4.6820, RMSE: 9.4473, R2: 0.9482, Uncertainty: 1.7065
+Fold 4 - Test MAE: 7.8093, RMSE: 11.0562, R2: 0.9342, Uncertainty: 2.0608
+
+--- Aggregating Results ---
+Average Metrics across 5/5 successful folds:
+  Train - MAE: 4.3214, RMSE: 9.1304, R2: 0.9500
+  Train - Uncertainty: 2.5681
+  Test  - MAE: 8.8425, RMSE: 12.8187, R2: 0.8953
+  Test  - Uncertainty: 2.7986
+Could not save detailed predictions: columns overlap but no suffix specified: Index(['target'], dtype='object')
+
+MODNet training run 'm2ax_223_roost_all_megnet_all_mvl_all_orb_v3' finished.
+Results summary saved to: results_m2ax_223_roost_all_megnet_all_mvl_all_orb_v3.txt
+Fold models saved in: out
+=== Finished MODNET_TRAIN ===
+Job finished on Fri Oct 17 01:35:28 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 01:01:52
+Execution Time                           - Wall_Time        : 00:00:58
+total programme cpu time                 - Total_CPU        : 00:07.893
+Total_CPU / CPU_Time  (%)                - ETA              : 0%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 01:01:52
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

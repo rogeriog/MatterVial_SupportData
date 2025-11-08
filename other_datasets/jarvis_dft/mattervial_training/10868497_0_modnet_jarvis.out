@@ -1,0 +1,63 @@
+Job started on Mon Oct 20 23:25:37 CEST 2025
+Running on node(s): cns261
+========================================================
+SLURM Task ID: 0
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: p-powerfact
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-20 23:25:43.573281: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-20 23:25:45.897636: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-20 23:25:45.897938: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-20 23:25:45.897964: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-20 23:25:45.897997: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns261.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_p-powerfact_roost_all_megnet_all_mvl_all_orb_v3
+Dropped 52775 rows with NaN values in the target column ('p-powerfact').
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-20 23:26:25,053 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Processed data files not found. Processing fold data...
+Fold 0: Applying XGBoost pre-selection (target < 800 features, ~10% drop)...
+Starting recursive feature elimination from 3282 features...
+Target: < 800 features. Strategy: Remove ~10% per step.
+  Dropped 328 features (328 actual); remaining features: 2954
+  Dropped 295 features (295 actual); remaining features: 2659
+  Dropped 265 features (265 actual); remaining features: 2394
+  Dropped 239 features (239 actual); remaining features: 2155
+  Dropped 215 features (215 actual); remaining features: 1940
+  Dropped 194 features (194 actual); remaining features: 1746
+slurmstepd: error: *** JOB 10868497 ON cns261 CANCELLED AT 2025-10-20T23:34:39 ***
+
+Resources Used
+
+Total Memory used                        - MEM              : 6.5GiB
+Total CPU Time                           - CPU_Time         : 09:39:12
+Execution Time                           - Wall_Time        : 00:09:03
+total programme cpu time                 - Total_CPU        : 08:54.606
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 09:39:12
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

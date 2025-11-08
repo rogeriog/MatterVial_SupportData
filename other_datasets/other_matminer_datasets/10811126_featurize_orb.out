@@ -1,0 +1,24 @@
+Job started on Thu Oct 16 15:35:40 CEST 2025
+Running on node(s): cna039
+
+EnvironmentLocationNotFound: Not a conda environment: /gpfs/scratch/acad/htforft/rgouvea/orb_env
+
+Traceback (most recent call last):
+  File "/gpfs/scratch/acad/htforft/rgouvea/other_datasets/processed_datasets/mattervial_featurizer_orb.py", line 6, in <module>
+    from mattervial.featurizers.structure import ORBFeaturizer
+ModuleNotFoundError: No module named 'mattervial'
+Job finished on Thu Oct 16 15:35:50 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:00:10
+Execution Time                           - Wall_Time        : 00:00:10
+total programme cpu time                 - Total_CPU        : 00:01.325
+Total_CPU / CPU_Time  (%)                - ETA              : 10%
+Number of alloc CPU                      - NCPUS            : 1
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:10:40
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 1%
+Energy (Joules)                                             : unknown
+

@@ -1,0 +1,45 @@
+Job started on Mon Oct 20 23:14:22 CEST 2025
+Running on node(s): cns261
+========================================================
+SLURM Task ID: 0
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: p-powerfact
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-20 23:14:34.470459: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-20 23:14:38.072446: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-20 23:14:38.072751: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-20 23:14:38.072779: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-20 23:14:38.072810: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns261.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_p-powerfact_roost_all_megnet_all_mvl_all_orb_v3
+Dropped 52775 rows with NaN values in the target column ('p-powerfact').
+
+Selecting features for sets: ['roost_all megnet_all mvl_all orb_v3']
+Traceback (most recent call last):
+  File "masterscript_modnet.py", line 3135, in <module>
+    main()
+  File "masterscript_modnet.py", line 3116, in main
+    run_modnet_training(
+  File "masterscript_modnet.py", line 2439, in run_modnet_training
+    raise ValueError(f"Unknown or unmatched feature set name: '{set_name}'. "
+ValueError: Unknown or unmatched feature set name: 'roost_all megnet_all mvl_all orb_v3'. Valid names correspond to keys or prefixes defined in FEATURE_GROUP_PATTERNS: ['matminer', 'sisso', 'sisso_v2', 'sissolvl2', 'sisso_mb_dielectric', 'sisso_mb_phonons', 'sisso_mb_perovskites', 'sisso_mb_expt_is_metal', 'sisso_mb_steels', 'sisso_mb_jdft2d', 'sisso_mb_log_gvrh', 'sisso_mb_mp_e_form', 'sisso_noemd_hse_pbe_diff', 'sisso_noemd_shg', 'sisso_mb_log_kvrh', 'sisso_mb_glass', 'sisso_mb_mp_is_metal', 'sisso_mb_mp_gap', 'sisso_mb_expt_gap', 'roost_mpgap_lo', 'roost_mpgap_lmp', 'roost_oqmd_lo', 'roost_oqmd_lmp', 'megnet_mm', 'megnet_ofm', 'mvl32', 'mvl16', 'roost_lmp', 'roost_lo', 'roost_mpgap', 'roost_oqmd', 'roost_all', 'megnet_all', 'mvl_all', 'orb_v3', 'cogn_fold0', 'cogn_fold1', 'cogn_fold2', 'cogn_fold3', 'cogn_fold4', 'ofm', 'sisso_residuals', 'sissolvl3', 'soap_mean', 'soap_std', 'soap_all', 'rosa', 'g']
+Job finished on Mon Oct 20 23:15:19 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 01:01:52
+Execution Time                           - Wall_Time        : 00:00:58
+total programme cpu time                 - Total_CPU        : 00:42.485
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 01:01:52
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

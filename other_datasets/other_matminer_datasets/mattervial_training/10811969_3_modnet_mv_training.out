@@ -1,0 +1,37 @@
+Job started on Thu Oct 16 17:47:16 CEST 2025
+Running on node(s): cns270
+Task ID: 3
+Selected features: roost_all megnet_all mvl_all orb_v3
+Data path: m2ax_223_mattervial_features.csv
+Suffix: m2ax_223
+=== Action: MODNET_TRAIN ===
+2025-10-16 17:47:19.875338: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-16 17:47:21.107350: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-16 17:47:21.107695: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-16 17:47:21.107720: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-16 17:47:21.107753: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns270.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from m2ax_223_mattervial_features.csv ...
+Using job prefix: m2ax_223_roost_all_megnet_all_mvl_all_orb_v3
+Traceback (most recent call last):
+  File "masterscript_modnet.py", line 3125, in <module>
+    main()
+  File "masterscript_modnet.py", line 3106, in main
+    run_modnet_training(
+  File "masterscript_modnet.py", line 2396, in run_modnet_training
+    raise ValueError(f"Input CSV must contain columns: {required_cols}")
+ValueError: Input CSV must contain columns: ['material_id', 'target']
+Job finished on Thu Oct 16 17:47:21 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:39:28
+Execution Time                           - Wall_Time        : 00:00:37
+total programme cpu time                 - Total_CPU        : 00:35.419
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:39:28
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

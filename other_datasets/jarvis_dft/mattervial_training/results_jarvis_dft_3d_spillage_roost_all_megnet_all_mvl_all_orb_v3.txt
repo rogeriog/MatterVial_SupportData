@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: spillage
+Data Path: jarvis_dft_3d_mattervial_features.csv
+Feature Sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+Job Prefix: jarvis_dft_3d_spillage_roost_all_megnet_all_mvl_all_orb_v3
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 0.1287, RMSE: 0.3067, R2: 0.7800, Uncertainty: 0.0605
+  Test  - MAE: 0.3255, RMSE: 0.5147, R2: 0.4060, Uncertainty: 0.1095
+
+Fold 1 Metrics:
+  Train - MAE: 0.1333, RMSE: 0.3235, R2: 0.7583, Uncertainty: 0.0653
+  Test  - MAE: 0.3296, RMSE: 0.5110, R2: 0.3843, Uncertainty: 0.1287
+
+Fold 2 Metrics:
+  Train - MAE: 0.1311, RMSE: 0.3115, R2: 0.7748, Uncertainty: 0.0605
+  Test  - MAE: 0.3269, RMSE: 0.5044, R2: 0.4113, Uncertainty: 0.1025
+
+Fold 3 Metrics:
+  Train - MAE: 0.1301, RMSE: 0.3174, R2: 0.7677, Uncertainty: 0.0570
+  Test  - MAE: 0.3186, RMSE: 0.5107, R2: 0.3810, Uncertainty: 0.1044
+
+Fold 4 Metrics:
+  Train - MAE: 0.1373, RMSE: 0.3149, R2: 0.7699, Uncertainty: 0.0857
+  Test  - MAE: 0.3318, RMSE: 0.5286, R2: 0.3535, Uncertainty: 0.1386
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 0.1321, RMSE: 0.3148, R2: 0.7701
+  Train - Uncertainty: 0.0658
+  Test  - MAE: 0.3265, RMSE: 0.5139, R2: 0.3872
+  Test  - Uncertainty: 0.1168
+

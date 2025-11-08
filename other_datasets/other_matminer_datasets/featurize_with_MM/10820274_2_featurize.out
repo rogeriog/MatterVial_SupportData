@@ -1,0 +1,36 @@
+Job started on Fri Oct 17 11:34:43 CEST 2025
+Running on node(s): cns261
+Executing Task ID: 2
+Running command for double_perovskites_gap_1306_optimized.csv
+=== Action: MODNET_FEATURIZE (Incremental Saving) ===
+Input source: ./double_perovskites_gap_1306_optimized.csv
+Featurizer type: structure
+Split into chunks: 20
+Chunk range: 19-20
+
+--- Starting MODNet Structure Featurization for: None ---
+Loading data from provided CSV: ./double_perovskites_gap_1306_optimized.csv
+Converting structure representations...
+Processing 1306 valid structures.
+Starting featurization across chunks 19–20 of 20 total chunks...
+Output file './double_perovskites_gap_1306_optimized_featurizedMM2020Struct_chunk_19_of_20.csv' already exists. Skipping chunk 19.
+Output file './double_perovskites_gap_1306_optimized_featurizedMM2020Struct_chunk_20_of_20.csv' already exists. Skipping chunk 20.
+
+--- Finished MODNet Structure Featurization for: None ---
+Featurized data saved incrementally in chunks 19–20 of 20 total chunks.
+=== Finished MODNET_FEATURIZE ===
+Job finished on Fri Oct 17 11:35:16 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:02:16
+Execution Time                           - Wall_Time        : 00:00:34
+total programme cpu time                 - Total_CPU        : 00:03.486
+Total_CPU / CPU_Time  (%)                - ETA              : 2%
+Number of alloc CPU                      - NCPUS            : 4
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 22
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:12:28
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 18%
+Energy (Joules)                                             : unknown
+

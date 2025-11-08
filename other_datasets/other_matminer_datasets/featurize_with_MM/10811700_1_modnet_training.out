@@ -1,0 +1,18 @@
+Job started on Thu Oct 16 16:47:43 CEST 2025
+Running on node(s): cns262
+Error: Arrays feature_combinations, data_paths and suffixes must have the same length.
+Lengths: feature_combinations=3, data_paths=2, suffixes=2
+
+Resources Used
+
+Total Memory used                        - MEM              : 0B
+Total CPU Time                           - CPU_Time         : 00:10:40
+Execution Time                           - Wall_Time        : 00:00:10
+total programme cpu time                 - Total_CPU        : 00:00.804
+Total_CPU / CPU_Time  (%)                - ETA              : 0%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 107
+Mobilized Resources x Execution Time     - R_Wall_Time      : 00:17:50
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 59%
+Energy (Joules)                                             : unknown
+

@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: target
+Data Path: m2ax_223_featurizedMM2020Struct.csv
+Feature Sets: ['matminer']
+Job Prefix: m2ax_223_matminer
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 9.3473, RMSE: 12.8436, R2: 0.9095, Uncertainty: 4.6427
+  Test  - MAE: 15.5548, RMSE: 19.4783, R2: 0.7401, Uncertainty: 5.3293
+
+Fold 1 Metrics:
+  Train - MAE: 8.5355, RMSE: 12.6100, R2: 0.9089, Uncertainty: 3.2388
+  Test  - MAE: 20.2508, RMSE: 25.4957, R2: 0.6198, Uncertainty: 3.7579
+
+Fold 2 Metrics:
+  Train - MAE: 7.0425, RMSE: 10.7852, R2: 0.9306, Uncertainty: 4.1856
+  Test  - MAE: 18.0757, RMSE: 22.7530, R2: 0.7406, Uncertainty: 5.7198
+
+Fold 3 Metrics:
+  Train - MAE: 11.8526, RMSE: 16.4419, R2: 0.8490, Uncertainty: 5.0054
+  Test  - MAE: 13.2075, RMSE: 17.3745, R2: 0.8013, Uncertainty: 5.4247
+
+Fold 4 Metrics:
+  Train - MAE: 7.8308, RMSE: 13.6293, R2: 0.8908, Uncertainty: 4.6427
+  Test  - MAE: 13.3332, RMSE: 19.2143, R2: 0.8065, Uncertainty: 5.3894
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 8.9217, RMSE: 13.2620, R2: 0.8978
+  Train - Uncertainty: 4.3430
+  Test  - MAE: 16.0844, RMSE: 20.8632, R2: 0.7417
+  Test  - Uncertainty: 5.1242
+

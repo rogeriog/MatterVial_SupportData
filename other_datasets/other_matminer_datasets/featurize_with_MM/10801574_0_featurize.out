@@ -1,0 +1,794 @@
+Job started on Wed Oct 15 16:39:40 CEST 2025
+Running on node(s): cns265
+Executing Task ID: 0
+Running command for m2ax_223.csv
+=== Action: MODNET_FEATURIZE (Incremental Saving) ===
+Input source: ./m2ax_223.csv
+Featurizer type: structure
+Split into chunks: 20
+Chunk range: None-None
+
+--- Starting MODNet Structure Featurization for: None ---
+Loading data from provided CSV: ./m2ax_223.csv
+Converting structure representations...
+Processing 223 valid structures.
+Starting featurization across chunks 1–20 of 20 total chunks...
+
+Processing chunk 1/20 (12 samples)...
+2025-10-15 16:40:20,952 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:40:20,955 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:40:20,956 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:40:20,960 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a509ef10>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:02,  4.12it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 48.33it/s]
+2025-10-15 16:40:24,285 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/12 [00:00<?, ?it/s]CompositionToOxidComposition:   8%|▊         | 1/12 [00:01<00:14,  1.35s/it]CompositionToOxidComposition: 100%|██████████| 12/12 [00:01<00:00,  8.88it/s]
+2025-10-15 16:40:25,922 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:02,  4.46it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 53.27it/s]
+2025-10-15 16:40:26,258 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:40:26,261 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:02,  4.41it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 52.24it/s]
+2025-10-15 16:40:43,090 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.55it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.52it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.55it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.57it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.35it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.55it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.55it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.55it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 16.53it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.42it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.31it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.46it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.38it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.55it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.54it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.40it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.40it/s]
+2025-10-15 16:41:44,124 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 1 to './m2ax_223_featurizedMM2020Struct_chunk_1_of_20.csv'.
+
+Processing chunk 2/20 (12 samples)...
+2025-10-15 16:41:44,592 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:41:44,594 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:41:44,594 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:41:44,598 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a500bb80>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.14it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 94.25it/s]
+2025-10-15 16:41:47,431 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/12 [00:00<?, ?it/s]CompositionToOxidComposition:   8%|▊         | 1/12 [00:00<00:07,  1.51it/s]CompositionToOxidComposition: 100%|██████████| 12/12 [00:00<00:00, 18.09it/s]
+2025-10-15 16:41:48,282 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.26it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 98.32it/s]
+2025-10-15 16:41:48,458 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:41:48,460 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.34it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 98.43it/s]
+2025-10-15 16:42:03,271 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.18it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 17.88it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.39it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.27it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 17.64it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.51it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.04it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.28it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.27it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.17it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.28it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.15it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.35it/s]
+2025-10-15 16:42:58,803 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 2 to './m2ax_223_featurizedMM2020Struct_chunk_2_of_20.csv'.
+
+Processing chunk 3/20 (12 samples)...
+2025-10-15 16:42:59,224 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:42:59,226 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:42:59,226 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:42:59,230 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93ac248d00>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.27it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 95.78it/s]
+2025-10-15 16:43:02,021 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/12 [00:00<?, ?it/s]CompositionToOxidComposition:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]CompositionToOxidComposition: 100%|██████████| 12/12 [00:00<00:00, 18.20it/s]
+2025-10-15 16:43:02,857 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.37it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 99.62it/s]
+2025-10-15 16:43:03,030 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:43:03,032 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/12 [00:00<?, ?it/s]MultipleFeaturizer:   8%|▊         | 1/12 [00:00<00:01,  8.29it/s]MultipleFeaturizer: 100%|██████████| 12/12 [00:00<00:00, 97.93it/s]
+2025-10-15 16:43:22,454 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.25it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.40it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.38it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.20it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 17.71it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.31it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.22it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.40it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.35it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.54it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.43it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.23it/s]
+SiteStatsFingerprint:   0%|          | 0/12 [00:00<?, ?it/s]SiteStatsFingerprint:   8%|▊         | 1/12 [00:00<00:07,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 12/12 [00:00<00:00, 18.32it/s]
+2025-10-15 16:44:27,674 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 3 to './m2ax_223_featurizedMM2020Struct_chunk_3_of_20.csv'.
+
+Processing chunk 4/20 (11 samples)...
+2025-10-15 16:44:28,100 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:44:28,102 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:44:28,103 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:44:28,107 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93ac1fb1f0>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.17it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.21it/s]
+2025-10-15 16:44:30,924 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.51it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.60it/s]
+2025-10-15 16:44:31,773 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.33it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 90.83it/s]
+2025-10-15 16:44:31,948 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:44:31,951 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.33it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 90.12it/s]
+2025-10-15 16:44:49,105 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.75it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.75it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.81it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.74it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.73it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.37it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.70it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.75it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.73it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.63it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.78it/s]
+2025-10-15 16:45:47,865 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 4 to './m2ax_223_featurizedMM2020Struct_chunk_4_of_20.csv'.
+
+Processing chunk 5/20 (11 samples)...
+2025-10-15 16:45:48,284 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:45:48,285 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:45:48,286 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:45:48,289 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d4aa30>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.26it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.63it/s]
+2025-10-15 16:45:51,184 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.51it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.62it/s]
+2025-10-15 16:45:52,116 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.37it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 91.27it/s]
+2025-10-15 16:45:52,288 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:45:52,291 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.32it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 89.93it/s]
+2025-10-15 16:46:12,867 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.77it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.77it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.53it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.79it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.70it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.57it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.36it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.50it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.40it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.40it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.38it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.37it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.50it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.47it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.51it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.62it/s]
+2025-10-15 16:47:22,886 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 5 to './m2ax_223_featurizedMM2020Struct_chunk_5_of_20.csv'.
+
+Processing chunk 6/20 (11 samples)...
+2025-10-15 16:47:23,312 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:47:23,313 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:47:23,314 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:47:23,317 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93ac248d00>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.08it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 85.53it/s]
+2025-10-15 16:47:26,137 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.32it/s]
+2025-10-15 16:47:27,006 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.97it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.86it/s]
+2025-10-15 16:47:27,192 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:47:27,194 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.08it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.35it/s]
+2025-10-15 16:47:46,395 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.05it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.37it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.25it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.32it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.43it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.90it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.99it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.10it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.11it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.11it/s]
+2025-10-15 16:48:49,514 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 6 to './m2ax_223_featurizedMM2020Struct_chunk_6_of_20.csv'.
+
+Processing chunk 7/20 (11 samples)...
+2025-10-15 16:48:49,936 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:48:49,938 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:48:49,938 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:48:49,941 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d2b040>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.83it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 82.92it/s]
+2025-10-15 16:48:52,775 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.01it/s]
+2025-10-15 16:48:53,655 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.98it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.08it/s]
+2025-10-15 16:48:53,835 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:48:53,837 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.07it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.30it/s]
+2025-10-15 16:49:15,300 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.07it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.47it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.94it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.92it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.04it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.09it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.04it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.95it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.11it/s]
+2025-10-15 16:50:28,862 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 7 to './m2ax_223_featurizedMM2020Struct_chunk_7_of_20.csv'.
+
+Processing chunk 8/20 (11 samples)...
+2025-10-15 16:50:29,290 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:50:29,291 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:50:29,292 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:50:29,295 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a500b700>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.95it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 83.48it/s]
+2025-10-15 16:50:32,224 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 15.93it/s]
+2025-10-15 16:50:33,205 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.05it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.71it/s]
+2025-10-15 16:50:33,386 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:50:33,389 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.05it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.02it/s]
+2025-10-15 16:50:53,921 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.17it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.93it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.59it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.03it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.90it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.16it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.28it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.26it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.01it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.24it/s]
+2025-10-15 16:52:00,358 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 8 to './m2ax_223_featurizedMM2020Struct_chunk_8_of_20.csv'.
+
+Processing chunk 9/20 (11 samples)...
+2025-10-15 16:52:00,840 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:52:00,842 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:52:00,843 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:52:00,844 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a5049f10>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.81it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 82.98it/s]
+2025-10-15 16:52:03,682 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 15.96it/s]
+2025-10-15 16:52:04,557 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.09it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 88.18it/s]
+2025-10-15 16:52:04,737 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:52:04,740 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.07it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.28it/s]
+2025-10-15 16:52:23,975 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.23it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.23it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.61it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.07it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.97it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.17it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+2025-10-15 16:53:28,002 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 9 to './m2ax_223_featurizedMM2020Struct_chunk_9_of_20.csv'.
+
+Processing chunk 10/20 (11 samples)...
+2025-10-15 16:53:28,426 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:53:28,428 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:53:28,429 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:53:28,432 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d4a430>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.97it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 84.38it/s]
+2025-10-15 16:53:31,262 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.09it/s]
+2025-10-15 16:53:32,136 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.05it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.79it/s]
+2025-10-15 16:53:32,317 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:53:32,319 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.01it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.69it/s]
+2025-10-15 16:53:49,585 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.05it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.09it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.54it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.10it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.36it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.97it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.34it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.66it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.99it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+2025-10-15 16:54:49,820 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 10 to './m2ax_223_featurizedMM2020Struct_chunk_10_of_20.csv'.
+
+Processing chunk 11/20 (11 samples)...
+2025-10-15 16:54:50,332 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:54:50,334 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:54:50,334 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:54:50,338 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93ac248f70>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.89it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 83.30it/s]
+2025-10-15 16:54:53,149 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.03it/s]
+2025-10-15 16:54:54,029 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.11it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 88.48it/s]
+2025-10-15 16:54:54,208 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:54:54,211 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.08it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.45it/s]
+2025-10-15 16:55:12,633 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.04it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.98it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.59it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.96it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.96it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.26it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.14it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.04it/s]
+2025-10-15 16:56:16,070 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 11 to './m2ax_223_featurizedMM2020Struct_chunk_11_of_20.csv'.
+
+Processing chunk 12/20 (11 samples)...
+2025-10-15 16:56:16,491 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:56:16,493 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:56:16,493 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:56:16,497 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a5049f70>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.01it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 85.08it/s]
+2025-10-15 16:56:19,419 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:07,  1.36it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 14.89it/s]
+2025-10-15 16:56:20,546 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.39it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 80.49it/s]
+2025-10-15 16:56:20,746 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:56:20,749 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.58it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 81.85it/s]
+2025-10-15 16:56:37,636 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.39it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.25it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.03it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.24it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.00it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.07it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.27it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.04it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.33it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.98it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+2025-10-15 16:57:40,771 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 12 to './m2ax_223_featurizedMM2020Struct_chunk_12_of_20.csv'.
+
+Processing chunk 13/20 (11 samples)...
+2025-10-15 16:57:41,197 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:57:41,199 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:57:41,200 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:57:41,203 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d4a610>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.92it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 83.95it/s]
+2025-10-15 16:57:44,025 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:07,  1.37it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 15.06it/s]
+2025-10-15 16:57:44,958 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.20it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 78.43it/s]
+2025-10-15 16:57:45,158 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:57:45,160 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.56it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 81.82it/s]
+2025-10-15 16:58:01,643 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.11it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.55it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.98it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.07it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.44it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.75it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.32it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.51it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.97it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.99it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+2025-10-15 16:59:01,991 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 13 to './m2ax_223_featurizedMM2020Struct_chunk_13_of_20.csv'.
+
+Processing chunk 14/20 (11 samples)...
+2025-10-15 16:59:02,420 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 16:59:02,422 - modnet - INFO - Computing features, this can take time...
+2025-10-15 16:59:02,423 - modnet - INFO - Applying composition featurizers...
+2025-10-15 16:59:02,426 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4b45d60>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.92it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 84.04it/s]
+2025-10-15 16:59:05,252 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 15.97it/s]
+2025-10-15 16:59:06,131 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.99it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.95it/s]
+2025-10-15 16:59:06,314 - modnet - INFO - Applying structure featurizers...
+2025-10-15 16:59:06,317 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.10it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.66it/s]
+2025-10-15 16:59:21,452 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.23it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.60it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.97it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.05it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.42it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.62it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.17it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.13it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.45it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.93it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+2025-10-15 17:00:21,192 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 14 to './m2ax_223_featurizedMM2020Struct_chunk_14_of_20.csv'.
+
+Processing chunk 15/20 (11 samples)...
+2025-10-15 17:00:21,617 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:00:21,618 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:00:21,619 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:00:21,622 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a5058190>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.90it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 83.85it/s]
+2025-10-15 17:00:24,543 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.03it/s]
+2025-10-15 17:00:25,519 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.03it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.64it/s]
+2025-10-15 17:00:25,700 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:00:25,703 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.13it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 88.00it/s]
+2025-10-15 17:00:41,787 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.26it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.23it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.25it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.79it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.01it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.50it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.40it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.32it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.36it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+2025-10-15 17:01:42,256 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 15 to './m2ax_223_featurizedMM2020Struct_chunk_15_of_20.csv'.
+
+Processing chunk 16/20 (11 samples)...
+2025-10-15 17:01:42,744 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:01:42,746 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:01:42,746 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:01:42,748 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d2bdf0>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.94it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 84.28it/s]
+2025-10-15 17:01:45,586 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+2025-10-15 17:01:46,452 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.02it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.28it/s]
+2025-10-15 17:01:46,634 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:01:46,637 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.05it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.09it/s]
+2025-10-15 17:02:02,431 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.38it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.33it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 14.65it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.21it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.16it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.57it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.02it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.17it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.16it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.11it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.16it/s]
+2025-10-15 17:03:02,226 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 16 to './m2ax_223_featurizedMM2020Struct_chunk_16_of_20.csv'.
+
+Processing chunk 17/20 (11 samples)...
+2025-10-15 17:03:02,654 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:03:02,656 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:03:02,656 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:03:02,660 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a5058970>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.98it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 84.19it/s]
+2025-10-15 17:03:05,496 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.46it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.06it/s]
+2025-10-15 17:03:06,375 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.13it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 88.66it/s]
+2025-10-15 17:03:06,551 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:03:06,553 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.06it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.90it/s]
+2025-10-15 17:03:23,081 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.28it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.62it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.22it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.28it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.09it/s]
+2025-10-15 17:04:24,447 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 17 to './m2ax_223_featurizedMM2020Struct_chunk_17_of_20.csv'.
+
+Processing chunk 18/20 (11 samples)...
+2025-10-15 17:04:24,874 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:04:24,875 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:04:24,876 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:04:24,879 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d2b5b0>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  7.90it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 83.51it/s]
+2025-10-15 17:04:27,692 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.12it/s]
+2025-10-15 17:04:28,574 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.10it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 88.42it/s]
+2025-10-15 17:04:28,751 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:04:28,753 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.09it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 87.28it/s]
+2025-10-15 17:04:46,701 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.08it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.33it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.70it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.15it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.32it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.47it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.18it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.20it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.48it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.27it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.49it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.39it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.62it/s]
+2025-10-15 17:05:49,478 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 18 to './m2ax_223_featurizedMM2020Struct_chunk_18_of_20.csv'.
+
+Processing chunk 19/20 (11 samples)...
+2025-10-15 17:05:49,899 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:05:49,901 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:05:49,901 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:05:49,904 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a5058220>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.19it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 86.83it/s]
+2025-10-15 17:05:52,793 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:00<00:06,  1.51it/s]CompositionToOxidComposition: 100%|██████████| 11/11 [00:00<00:00, 16.54it/s]
+2025-10-15 17:05:53,717 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.32it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 90.64it/s]
+2025-10-15 17:05:53,895 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:05:53,898 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:01,  8.32it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 90.06it/s]
+2025-10-15 17:06:10,804 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.68it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.69it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.62it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:06,  1.52it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 16.65it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.32s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.12it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:14,  1.45s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  7.60it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.29s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.50it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.28s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.58it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:09,  1.10it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 12.03it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:11,  1.19s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  9.19it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:10,  1.03s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00, 10.66it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.30s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.43it/s]
+2025-10-15 17:07:22,264 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 19 to './m2ax_223_featurizedMM2020Struct_chunk_19_of_20.csv'.
+
+Processing chunk 20/20 (11 samples)...
+2025-10-15 17:07:22,691 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+2025-10-15 17:07:22,694 - modnet - INFO - Computing features, this can take time...
+2025-10-15 17:07:22,694 - modnet - INFO - Applying composition featurizers...
+2025-10-15 17:07:22,698 - modnet - INFO - Applying featurizers (AtomicOrbitals(), AtomicPackingEfficiency(), BandCenter(), ElementFraction(), ElementProperty(data_source=<matminer.utils.data.MagpieData object at 0x7f93a4d4a8b0>,
+                features=['Number', 'MendeleevNumber', 'AtomicWeight',
+                          'MeltingT', 'Column', 'Row', 'CovalentRadius',
+                          'Electronegativity', 'NsValence', 'NpValence',
+                          'NdValence', 'NfValence', 'NValence', 'NsUnfilled',
+                          'NpUnfilled', 'NdUnfilled', 'NfUnfilled', 'NUnfilled',
+                          'GSvolume_pa', 'GSbandgap', 'GSmagmom',
+                          'SpaceGroupNumber'],
+                stats=['minimum', 'maximum', 'range', 'mean', 'avg_dev',
+                       'mode']), IonProperty(), Miedema(ss_types=['min'], struct_types=['inter', 'amor', 'ss']), Stoichiometry(), TMetalFraction(), ValenceOrbital(), YangSolidSolution()) to column 'composition'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:02,  4.37it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 46.72it/s]
+2025-10-15 17:07:25,730 - modnet - INFO - Applying oxidation state featurizers...
+CompositionToOxidComposition:   0%|          | 0/11 [00:00<?, ?it/s]CompositionToOxidComposition:   9%|▉         | 1/11 [00:01<00:12,  1.23s/it]CompositionToOxidComposition: 100%|██████████| 11/11 [00:01<00:00,  8.93it/s]
+2025-10-15 17:07:27,247 - modnet - INFO - Applying featurizers (ElectronegativityDiff(stats=['minimum', 'maximum', 'range', 'mean', 'std_dev']), OxidationStates(stats=['minimum', 'maximum', 'range', 'std_dev'])) to column 'composition_oxid'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:02,  4.37it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 47.75it/s]
+2025-10-15 17:07:27,590 - modnet - INFO - Applying structure featurizers...
+2025-10-15 17:07:27,593 - modnet - INFO - Applying featurizers (DensityFeatures(), GlobalSymmetryFeatures(), RadialDistributionFunction(), CoulombMatrix(), SineCoulombMatrix(), EwaldEnergy(), BondFractions(), StructuralHeterogeneity(), MaximumPackingEfficiency(), ChemicalOrdering(), XRDPowderPattern(pattern_length=128)) to column 'structure'.
+MultipleFeaturizer:   0%|          | 0/11 [00:00<?, ?it/s]MultipleFeaturizer:   9%|▉         | 1/11 [00:00<00:02,  4.45it/s]MultipleFeaturizer: 100%|██████████| 11/11 [00:00<00:00, 48.45it/s]
+2025-10-15 17:07:47,014 - modnet - INFO - Applying site featurizers...
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.23s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.91it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.30s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.34it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.28s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.58it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:11,  1.15s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  9.59it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:10,  1.05s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00, 10.26it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:00<00:07,  1.41it/s]SiteStatsFingerprint: 100%|██████████| 11/11 [00:00<00:00, 15.47it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.31s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.36it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.30s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.44it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.22s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  9.01it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.32s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.29it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:12,  1.23s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.95it/s]
+SiteStatsFingerprint:   0%|          | 0/11 [00:00<?, ?it/s]SiteStatsFingerprint:   9%|▉         | 1/11 [00:01<00:13,  1.31s/it]SiteStatsFingerprint: 100%|██████████| 11/11 [00:01<00:00,  8.36it/s]
+2025-10-15 17:09:00,964 - modnet - INFO - Data has successfully been featurized!
+  Successfully saved chunk 20 to './m2ax_223_featurizedMM2020Struct_chunk_20_of_20.csv'.
+
+--- Finished MODNet Structure Featurization for: None ---
+Featurized data saved incrementally in chunks 1–20 of 20 total chunks.
+=== Finished MODNET_FEATURIZE ===
+Job finished on Wed Oct 15 17:09:02 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 611MiB
+Total CPU Time                           - CPU_Time         : 01:57:32
+Execution Time                           - Wall_Time        : 00:29:23
+total programme cpu time                 - Total_CPU        : 45:02.463
+Total_CPU / CPU_Time  (%)                - ETA              : 38%
+Number of alloc CPU                      - NCPUS            : 4
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 22
+Mobilized Resources x Execution Time     - R_Wall_Time      : 10:46:26
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 18%
+Energy (Joules)                                             : unknown
+

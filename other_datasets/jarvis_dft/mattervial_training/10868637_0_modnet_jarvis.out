@@ -1,0 +1,248 @@
+Job started on Mon Oct 20 23:43:09 CEST 2025
+Running on node(s): cns261
+========================================================
+SLURM Task ID: 0
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: p-powerfact
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-20 23:43:16.184712: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-20 23:43:19.583901: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-20 23:43:19.584208: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-20 23:43:19.584237: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-20 23:43:19.584269: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns261.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_p-powerfact_roost_all_megnet_all_mvl_all_orb_v3
+Dropped 52775 rows with NaN values in the target column ('p-powerfact').
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-20 23:43:57,638 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Processed data files not found. Processing fold data...
+Fold 0: Applying XGBoost pre-selection (target < 800 features, ~10% drop)...
+Starting robust feature elimination from 3282 features...
+Using 5-fold CV with 60% consensus threshold
+Features in bottom 20th percentile of ranks are candidates for removal.
+Target variable prepared. Shape: (18574,)
+Preparing scaler and scaling features...
+Features scaled and NaNs imputed. Full scaled data shape: (18574, 3282)
+Concatenating dropped features for this run into: dropped_features_p-powerfact_20251020_234358.txt
+
+Iteration 1: 3282 features remaining.
+Subsetting data for current iteration. Shape: (18574, 3282)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 3282), y=(14859,)
+  Fold 1: XGBoost model fitted in 84.55 seconds.
+  Fold 1: Rank threshold for removal candidate: 656.20 (bottom 20th percentile)
+  Fold 1 completed in 84.62 seconds.
+  Fold 2/5: Training data shape X=(14859, 3282), y=(14859,)
+  Fold 2: XGBoost model fitted in 85.53 seconds.
+  Fold 2: Rank threshold for removal candidate: 656.20 (bottom 20th percentile)
+  Fold 2 completed in 85.62 seconds.
+  Fold 3/5: Training data shape X=(14859, 3282), y=(14859,)
+  Fold 3: XGBoost model fitted in 84.26 seconds.
+  Fold 3: Rank threshold for removal candidate: 656.20 (bottom 20th percentile)
+  Fold 3 completed in 84.34 seconds.
+  Fold 4/5: Training data shape X=(14859, 3282), y=(14859,)
+  Fold 4: XGBoost model fitted in 86.86 seconds.
+  Fold 4: Rank threshold for removal candidate: 656.20 (bottom 20th percentile)
+  Fold 4 completed in 86.93 seconds.
+  Fold 5/5: Training data shape X=(14860, 3282), y=(14860,)
+  Fold 5: XGBoost model fitted in 83.52 seconds.
+  Fold 5: Rank threshold for removal candidate: 656.20 (bottom 20th percentile)
+  Fold 5 completed in 83.59 seconds.
+
+Evaluating consensus for feature removal...
+Minimum votes needed for consensus: 3 out of 5 folds.
+Initial features identified for removal by consensus: 463
+Removing 463 features from the dataset.
+Features remaining after iteration 1: 2819
+Logged dropped features to dropped_features_p-powerfact_iter_1.txt
+Appended dropped features to dropped_features_p-powerfact_20251020_234358.txt
+Iteration 1 completed in 425.32 seconds.
+
+Iteration 2: 2819 features remaining.
+Subsetting data for current iteration. Shape: (18574, 2819)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 2819), y=(14859,)
+  Fold 1: XGBoost model fitted in 71.90 seconds.
+  Fold 1: Rank threshold for removal candidate: 563.60 (bottom 20th percentile)
+  Fold 1 completed in 71.96 seconds.
+  Fold 2/5: Training data shape X=(14859, 2819), y=(14859,)
+  Fold 2: XGBoost model fitted in 72.10 seconds.
+  Fold 2: Rank threshold for removal candidate: 563.60 (bottom 20th percentile)
+  Fold 2 completed in 72.16 seconds.
+  Fold 3/5: Training data shape X=(14859, 2819), y=(14859,)
+  Fold 3: XGBoost model fitted in 72.20 seconds.
+  Fold 3: Rank threshold for removal candidate: 563.60 (bottom 20th percentile)
+  Fold 3 completed in 72.26 seconds.
+  Fold 4/5: Training data shape X=(14859, 2819), y=(14859,)
+  Fold 4: XGBoost model fitted in 72.25 seconds.
+  Fold 4: Rank threshold for removal candidate: 563.60 (bottom 20th percentile)
+  Fold 4 completed in 72.31 seconds.
+  Fold 5/5: Training data shape X=(14860, 2819), y=(14860,)
+  Fold 5: XGBoost model fitted in 72.92 seconds.
+  Fold 5: Rank threshold for removal candidate: 563.60 (bottom 20th percentile)
+  Fold 5 completed in 72.98 seconds.
+
+Evaluating consensus for feature removal...
+Minimum votes needed for consensus: 3 out of 5 folds.
+Initial features identified for removal by consensus: 358
+Removing 358 features from the dataset.
+Features remaining after iteration 2: 2461
+Logged dropped features to dropped_features_p-powerfact_iter_2.txt
+Appended dropped features to dropped_features_p-powerfact_20251020_234358.txt
+Iteration 2 completed in 361.83 seconds.
+
+Iteration 3: 2461 features remaining.
+Subsetting data for current iteration. Shape: (18574, 2461)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 2461), y=(14859,)
+  Fold 1: XGBoost model fitted in 63.27 seconds.
+  Fold 1: Rank threshold for removal candidate: 492.00 (bottom 20th percentile)
+  Fold 1 completed in 63.33 seconds.
+  Fold 2/5: Training data shape X=(14859, 2461), y=(14859,)
+  Fold 2: XGBoost model fitted in 63.97 seconds.
+  Fold 2: Rank threshold for removal candidate: 492.00 (bottom 20th percentile)
+  Fold 2 completed in 64.02 seconds.
+  Fold 3/5: Training data shape X=(14859, 2461), y=(14859,)
+  Fold 3: XGBoost model fitted in 63.41 seconds.
+  Fold 3: Rank threshold for removal candidate: 492.00 (bottom 20th percentile)
+  Fold 3 completed in 63.46 seconds.
+  Fold 4/5: Training data shape X=(14859, 2461), y=(14859,)
+  Fold 4: XGBoost model fitted in 63.45 seconds.
+  Fold 4: Rank threshold for removal candidate: 492.00 (bottom 20th percentile)
+  Fold 4 completed in 63.50 seconds.
+  Fold 5/5: Training data shape X=(14860, 2461), y=(14860,)
+  Fold 5: XGBoost model fitted in 63.87 seconds.
+  Fold 5: Rank threshold for removal candidate: 492.00 (bottom 20th percentile)
+  Fold 5 completed in 63.92 seconds.
+
+Evaluating consensus for feature removal...
+Minimum votes needed for consensus: 3 out of 5 folds.
+Initial features identified for removal by consensus: 296
+Removing 296 features from the dataset.
+Features remaining after iteration 3: 2165
+Logged dropped features to dropped_features_p-powerfact_iter_3.txt
+Appended dropped features to dropped_features_p-powerfact_20251020_234358.txt
+Iteration 3 completed in 318.37 seconds.
+
+Iteration 4: 2165 features remaining.
+Subsetting data for current iteration. Shape: (18574, 2165)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 2165), y=(14859,)
+  Fold 1: XGBoost model fitted in 56.72 seconds.
+  Fold 1: Rank threshold for removal candidate: 432.80 (bottom 20th percentile)
+  Fold 1 completed in 56.77 seconds.
+  Fold 2/5: Training data shape X=(14859, 2165), y=(14859,)
+  Fold 2: XGBoost model fitted in 56.67 seconds.
+  Fold 2: Rank threshold for removal candidate: 432.80 (bottom 20th percentile)
+  Fold 2 completed in 56.72 seconds.
+  Fold 3/5: Training data shape X=(14859, 2165), y=(14859,)
+  Fold 3: XGBoost model fitted in 56.83 seconds.
+  Fold 3: Rank threshold for removal candidate: 432.80 (bottom 20th percentile)
+  Fold 3 completed in 56.88 seconds.
+  Fold 4/5: Training data shape X=(14859, 2165), y=(14859,)
+  Fold 4: XGBoost model fitted in 57.97 seconds.
+  Fold 4: Rank threshold for removal candidate: 432.80 (bottom 20th percentile)
+  Fold 4 completed in 58.01 seconds.
+  Fold 5/5: Training data shape X=(14860, 2165), y=(14860,)
+  Fold 5: XGBoost model fitted in 56.22 seconds.
+  Fold 5: Rank threshold for removal candidate: 432.80 (bottom 20th percentile)
+  Fold 5 completed in 56.27 seconds.
+
+Evaluating consensus for feature removal...
+Minimum votes needed for consensus: 3 out of 5 folds.
+Initial features identified for removal by consensus: 216
+Removing 216 features from the dataset.
+Features remaining after iteration 4: 1949
+Logged dropped features to dropped_features_p-powerfact_iter_4.txt
+Appended dropped features to dropped_features_p-powerfact_20251020_234358.txt
+Iteration 4 completed in 284.76 seconds.
+
+Iteration 5: 1949 features remaining.
+Subsetting data for current iteration. Shape: (18574, 1949)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 1949), y=(14859,)
+  Fold 1: XGBoost model fitted in 50.67 seconds.
+  Fold 1: Rank threshold for removal candidate: 389.60 (bottom 20th percentile)
+  Fold 1 completed in 50.72 seconds.
+  Fold 2/5: Training data shape X=(14859, 1949), y=(14859,)
+  Fold 2: XGBoost model fitted in 51.72 seconds.
+  Fold 2: Rank threshold for removal candidate: 389.60 (bottom 20th percentile)
+  Fold 2 completed in 51.76 seconds.
+  Fold 3/5: Training data shape X=(14859, 1949), y=(14859,)
+  Fold 3: XGBoost model fitted in 51.90 seconds.
+  Fold 3: Rank threshold for removal candidate: 389.60 (bottom 20th percentile)
+  Fold 3 completed in 51.94 seconds.
+  Fold 4/5: Training data shape X=(14859, 1949), y=(14859,)
+  Fold 4: XGBoost model fitted in 50.92 seconds.
+  Fold 4: Rank threshold for removal candidate: 389.60 (bottom 20th percentile)
+  Fold 4 completed in 50.96 seconds.
+  Fold 5/5: Training data shape X=(14860, 1949), y=(14860,)
+  Fold 5: XGBoost model fitted in 50.72 seconds.
+  Fold 5: Rank threshold for removal candidate: 389.60 (bottom 20th percentile)
+  Fold 5 completed in 50.77 seconds.
+
+Evaluating consensus for feature removal...
+Minimum votes needed for consensus: 3 out of 5 folds.
+Initial features identified for removal by consensus: 162
+Removing 162 features from the dataset.
+Features remaining after iteration 5: 1787
+Logged dropped features to dropped_features_p-powerfact_iter_5.txt
+Appended dropped features to dropped_features_p-powerfact_20251020_234358.txt
+Iteration 5 completed in 256.26 seconds.
+
+Iteration 6: 1787 features remaining.
+Subsetting data for current iteration. Shape: (18574, 1787)
+Starting 5-fold cross-validation...
+  Fold 1/5: Training data shape X=(14859, 1787), y=(14859,)
+  Fold 1: XGBoost model fitted in 45.93 seconds.
+  Fold 1: Rank threshold for removal candidate: 357.20 (bottom 20th percentile)
+  Fold 1 completed in 45.97 seconds.
+  Fold 2/5: Training data shape X=(14859, 1787), y=(14859,)
+  Fold 2: XGBoost model fitted in 46.65 seconds.
+  Fold 2: Rank threshold for removal candidate: 357.20 (bottom 20th percentile)
+  Fold 2 completed in 46.69 seconds.
+  Fold 3/5: Training data shape X=(14859, 1787), y=(14859,)
+  Fold 3: XGBoost model fitted in 47.03 seconds.
+  Fold 3: Rank threshold for removal candidate: 357.20 (bottom 20th percentile)
+  Fold 3 completed in 47.07 seconds.
+  Fold 4/5: Training data shape X=(14859, 1787), y=(14859,)
+  Fold 4: XGBoost model fitted in 46.53 seconds.
+  Fold 4: Rank threshold for removal candidate: 357.20 (bottom 20th percentile)
+  Fold 4 completed in 46.57 seconds.
+  Fold 5/5: Training data shape X=(14860, 1787), y=(14860,)
+slurmstepd: error: *** JOB 10868637 ON cns261 CANCELLED AT 2025-10-21T00:15:18 ***
+
+Resources Used
+
+Total Memory used                        - MEM              : 9.3GiB
+Total CPU Time                           - CPU_Time         : 1-10:18:40
+Execution Time                           - Wall_Time        : 00:32:10
+total programme cpu time                 - Total_CPU        : 31:54.611
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 1-10:18:40
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+

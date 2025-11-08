@@ -1,0 +1,35 @@
+--- MODNet Training Results (ga strategy) ---
+Target: target
+Data Path: m2ax_223_mattervial_features.csv
+Feature Sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+Job Prefix: m2ax_223_roost_all_megnet_all_mvl_all_orb_v3
+Folds: 5
+XGB Pre-selection: Target < 800 features, Drop ~10%/step
+
+Fold 0 Metrics:
+  Train - MAE: 4.7115, RMSE: 9.1195, R2: 0.9537, Uncertainty: 4.5240
+  Test  - MAE: 7.7191, RMSE: 12.2557, R2: 0.9014, Uncertainty: 4.0966
+
+Fold 1 Metrics:
+  Train - MAE: 4.5883, RMSE: 11.6112, R2: 0.9149, Uncertainty: 1.7723
+  Test  - MAE: 9.0292, RMSE: 11.6621, R2: 0.9423, Uncertainty: 2.2723
+
+Fold 2 Metrics:
+  Train - MAE: 3.9569, RMSE: 8.6805, R2: 0.9595, Uncertainty: 2.4438
+  Test  - MAE: 9.0432, RMSE: 14.3315, R2: 0.8344, Uncertainty: 2.6520
+
+Fold 3 Metrics:
+  Train - MAE: 3.6684, RMSE: 6.7935, R2: 0.9740, Uncertainty: 2.3937
+  Test  - MAE: 10.6115, RMSE: 14.7880, R2: 0.8643, Uncertainty: 2.9114
+
+Fold 4 Metrics:
+  Train - MAE: 4.6820, RMSE: 9.4473, R2: 0.9482, Uncertainty: 1.7065
+  Test  - MAE: 7.8093, RMSE: 11.0562, R2: 0.9342, Uncertainty: 2.0608
+
+--- Average Metrics ---
+Across 5/5 successful folds:
+  Train - MAE: 4.3214, RMSE: 9.1304, R2: 0.9500
+  Train - Uncertainty: 2.5681
+  Test  - MAE: 8.8425, RMSE: 12.8187, R2: 0.8953
+  Test  - Uncertainty: 2.7986
+

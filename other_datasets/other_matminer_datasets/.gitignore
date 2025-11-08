@@ -1,0 +1,11 @@
+results_custom/
+results_cross_test/
+original_remove_after/
+old_results_custom/
+old_dataset_cache/
+mv_orb_featurized_data/
+mv_noorb_featurized_data/
+dataset_cache/
+dump/
+.venv/
+*.csv

@@ -1,0 +1,146 @@
+Job started on Fri Oct 24 18:03:14 CEST 2025
+Running on node(s): cns266
+========================================================
+SLURM Task ID: 8
+--------------------------------------------------------
+  > Data path:       jarvis_dft_3d_mattervial_features.csv
+  > Suffix:          jarvis_dft_3d
+  > Selected features: roost_all megnet_all mvl_all orb_v3
+  > Target Property: magmom_oszicar
+========================================================
+=== Action: MODNET_TRAIN ===
+2025-10-24 18:03:16.308989: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2025-10-24 18:03:17.566505: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:03:17.566827: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /gpfs/softs/easybuild/software/cuDNN/8.4.1.50-CUDA-11.7.0/lib:/gpfs/softs/easybuild/software/CUDA/11.7.0/nvvm/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/extras/CUPTI/lib64:/gpfs/softs/easybuild/software/CUDA/11.7.0/lib
+2025-10-24 18:03:17.566856: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2025-10-24 18:03:17.566888: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (cns266.lucia.cenaero.be): /proc/driver/nvidia/version does not exist
+Loading full CSV from jarvis_dft_3d_mattervial_features.csv ...
+sys:1: DtypeWarning: Columns (3292,3305,3310,3343) have mixed types.Specify dtype option on import or set low_memory=False.
+Using job prefix: jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3
+Dropped 4673 rows with NaN values in the target column ('magmom_oszicar').
+
+Selecting features for sets: ['roost_all', 'megnet_all', 'mvl_all', 'orb_v3']
+ - Matching columns for 'roost_all' using pattern: ^ROOST_
+   Found 256 columns for 'roost_all'.
+ - Matching columns for 'megnet_all' using pattern: ^MEGNet_
+   Found 946 columns for 'megnet_all'.
+ - Matching columns for 'mvl_all' using pattern: ^MVL(16|32)_
+   Found 288 columns for 'mvl_all'.
+ - Matching columns for 'orb_v3' using pattern: ^ORB_v3_
+   Found 1792 columns for 'orb_v3'.
+
+Total features selected: 3282
+Determined task type for splitting: Regression
+Creating initial MODData object...
+2025-10-24 18:03:57,270 - modnet - INFO - Loaded DeBreuck2020Featurizer featurizer.
+Initial MODData created with 3282 features.
+
+Processing 5 folds...
+Fold 0: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f0)...
+2025-10-24 18:03:57,563 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb73bc14f0> object, created with modnet version 0.1.13
+2025-10-24 18:03:57,629 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb73bbe220> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 0: Processing complete.
+Fold 1: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f1)...
+2025-10-24 18:03:57,814 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb73bbe370> object, created with modnet version 0.1.13
+2025-10-24 18:03:57,884 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb73bc1790> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 1: Processing complete.
+Fold 2: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f2)...
+2025-10-24 18:03:58,078 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb733c1280> object, created with modnet version 0.1.13
+2025-10-24 18:03:58,195 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb70a88250> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 2: Processing complete.
+Fold 3: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f3)...
+2025-10-24 18:03:58,415 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb6db13670> object, created with modnet version 0.1.13
+2025-10-24 18:03:58,483 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb71d61e20> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 3: Processing complete.
+Fold 4: Loading pre-processed train and test MODData from disk (jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f4)...
+2025-10-24 18:03:58,693 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb6ff51970> object, created with modnet version 0.1.13
+2025-10-24 18:03:58,755 - modnet - INFO - Loaded <modnet.preprocessing.MODData object at 0x7fbb6c5c17c0> object, created with modnet version 0.1.13
+  Loaded train data with 800 features.
+  Loaded test data with 800 features.
+Fold 4: Processing complete.
+
+Starting model training across 5 folds using 'ga' strategy...
+
+--- Processing Fold 0 ---
+  Train data shape: (57056, 800), Test data shape: (14264, 800)
+Fold 0: Loading pre-trained model from out/MODNet_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f0_ga.pkl
+2025-10-24 18:03:58.771913: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2025-10-24 18:03:58,873 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7fbb73bbe460> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 0: Evaluating model...
+2025-10-24 18:03:59.847052: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2025-10-24 18:03:59.859435: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2445430000 Hz
+Fold 0 - Train MAE: 0.2323, RMSE: 0.5383, R2: 0.9290, Uncertainty: 0.3304
+Fold 0 - Test MAE: 0.3439, RMSE: 0.7671, R2: 0.8541, Uncertainty: 0.3673
+
+--- Processing Fold 1 ---
+  Train data shape: (57056, 800), Test data shape: (14264, 800)
+Fold 1: Loading pre-trained model from out/MODNet_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f1_ga.pkl
+2025-10-24 18:04:08,923 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7fbb73bbe460> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 1: Evaluating model...
+Fold 1 - Train MAE: 0.1087, RMSE: 0.4938, R2: 0.9404, Uncertainty: 0.0693
+Fold 1 - Test MAE: 0.2488, RMSE: 0.7702, R2: 0.8512, Uncertainty: 0.1240
+
+--- Processing Fold 2 ---
+  Train data shape: (57056, 800), Test data shape: (14264, 800)
+Fold 2: Loading pre-trained model from out/MODNet_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f2_ga.pkl
+2025-10-24 18:04:18,829 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7fbb6cadd5e0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 2: Evaluating model...
+Fold 2 - Train MAE: 0.1070, RMSE: 0.4871, R2: 0.9412, Uncertainty: 0.0633
+Fold 2 - Test MAE: 0.2526, RMSE: 0.7934, R2: 0.8512, Uncertainty: 0.1173
+
+--- Processing Fold 3 ---
+  Train data shape: (57056, 800), Test data shape: (14264, 800)
+Fold 3: Loading pre-trained model from out/MODNet_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f3_ga.pkl
+2025-10-24 18:04:29,199 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7fbb6cadd610> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 3: Evaluating model...
+Fold 3 - Train MAE: 0.1150, RMSE: 0.5118, R2: 0.9356, Uncertainty: 0.0683
+Fold 3 - Test MAE: 0.2526, RMSE: 0.8128, R2: 0.8383, Uncertainty: 0.1185
+
+--- Processing Fold 4 ---
+  Train data shape: (57056, 800), Test data shape: (14264, 800)
+Fold 4: Loading pre-trained model from out/MODNet_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3_f4_ga.pkl
+2025-10-24 18:04:40,163 - modnet - INFO - Loaded <modnet.models.ensemble.EnsembleMODNetModel object at 0x7fbb74f24bb0> object, created with modnet version 0.1.13
+  Loaded model expected n_feat: N/A
+Fold 4: Evaluating model...
+Fold 4 - Train MAE: 0.1202, RMSE: 0.5169, R2: 0.9346, Uncertainty: 0.0778
+Fold 4 - Test MAE: 0.2535, RMSE: 0.7799, R2: 0.8488, Uncertainty: 0.1449
+
+--- Aggregating Results ---
+Average Metrics across 5/5 successful folds:
+  Train - MAE: 0.1367, RMSE: 0.5096, R2: 0.9362
+  Train - Uncertainty: 0.1218
+  Test  - MAE: 0.2703, RMSE: 0.7847, R2: 0.8487
+  Test  - Uncertainty: 0.1744
+Could not save detailed predictions: "['magmom_oszicar'] not in index"
+
+MODNet training run 'jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3' finished.
+Results summary saved to: results_jarvis_dft_3d_magmom_oszicar_roost_all_megnet_all_mvl_all_orb_v3.txt
+Fold models saved in: out
+=== Finished MODNET_TRAIN ===
+Job finished on Fri Oct 24 18:04:48 CEST 2025
+
+Resources Used
+
+Total Memory used                        - MEM              : 9.7GiB
+Total CPU Time                           - CPU_Time         : 01:41:20
+Execution Time                           - Wall_Time        : 00:01:35
+total programme cpu time                 - Total_CPU        : 01:35.694
+Total_CPU / CPU_Time  (%)                - ETA              : 1%
+Number of alloc CPU                      - NCPUS            : 64
+Number of Mobilized Resources per Job    - NCPUS_EQUIV_PJOB : 64
+Mobilized Resources x Execution Time     - R_Wall_Time      : 01:41:20
+CPU_Time / R_Wall_Time (%)               - ALPHA            : 100%
+Energy (Joules)                                             : unknown
+
